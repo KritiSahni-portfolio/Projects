@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap" rel="stylesheet"/>
+<title>Behaviour and Insights — Kriti Sahni</title>
+<style>
+:root{
+  --ink:#161616;--ink2:#3d3d3d;--ink3:#6e6e6e;--ink4:#9a9a9a;
+  --bg:#fff;--bg2:#f7f7f5;--bg3:#efefec;
+  --bdr:#e3e3df;--bdr2:#cfcfca;
+  --ac:#3D7A5C;--ac-l:#f2f6f3;--ac-m:#cddcd3;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',-apple-system,sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.hidden{display:none!important}
+img{display:block;max-width:100%}
+
+.cv-purple{--ac:#8A4FBF;--ac-l:#F5EEFC;--ac-m:#D8BFEC}
+.cv-orange{--ac:#E08A1E;--ac-l:#FEF6E9;--ac-m:#F7D9A4}
+.cv-burnt {--ac:#B85C10;--ac-l:#FDF2E6;--ac-m:#EFC69B}
+.cv-plum  {--ac:#4A2E73;--ac-l:#F0EDF6;--ac-m:#C3B7D9}
+.cv-blue  {--ac:#1F6FB2;--ac-l:#EBF3FA;--ac-m:#B3D0E9}
+.cv-forest{--ac:#1A5438;--ac-l:#EBF3EE;--ac-m:#B2D0BF}
+.cv-violet{--ac:#5B3E9B;--ac-l:#F1EDF9;--ac-m:#C9BBE4}
+.cv-sky   {--ac:#1F6F8B;--ac-l:#ECF4F7;--ac-m:#B4D4DF}
+.cv-red   {--ac:#B03535;--ac-l:#FCF1F1;--ac-m:#E8B8B8}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--bdr);height:54px;display:flex;align-items:center;justify-content:space-between;padding:0 32px}
+.logo{font-weight:800;font-size:15px;letter-spacing:-.03em;cursor:pointer;display:flex;align-items:center;gap:9px}
+.logo-dot{width:8px;height:8px;border-radius:50%;background:#E08A1E;transition:background .35s}
+.nav-back{display:none;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--ink2);padding:5px 14px;border:1px solid var(--bdr);border-radius:100px;cursor:pointer;transition:.15s}
+.nav-back.vis{display:flex}
+.nav-back:hover{background:var(--bg3)}
+.nav-back svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2}
+.nav-tag{font-size:10px;font-weight:600;color:var(--ink4);letter-spacing:.09em;text-transform:uppercase}
+
+#p-col{padding-top:54px}
+.hero-band{background:var(--bg);position:relative;overflow:hidden;border-bottom:1px solid var(--bdr)}
+.hero-band::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(0,0,0,.055) 1px,transparent 0);background-size:22px 22px;-webkit-mask-image:linear-gradient(115deg,transparent 38%,#000 100%);mask-image:linear-gradient(115deg,transparent 38%,#000 100%);pointer-events:none}
+.hero-band::after{content:'';position:absolute;top:-160px;right:-140px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(31,111,178,.09) 0%,rgba(224,138,30,.05) 48%,transparent 72%);pointer-events:none}
+.hero-in{position:relative;z-index:2}
+.h-rings{position:absolute;top:-70px;right:-70px;width:340px;height:340px;z-index:1;pointer-events:none;opacity:.5}
+@media(max-width:900px){.h-rings{opacity:.28;width:250px;height:250px;top:-50px;right:-60px}}
+@media(max-width:820px){}
+.hero-in{max-width:840px;margin:0 auto;padding:64px 40px 54px;position:relative;z-index:2}
+.h-badge{display:inline-flex;align-items:center;gap:8px;background:var(--bg2);border:1px solid var(--bdr);border-radius:100px;padding:5px 14px;font-size:11px;font-weight:600;color:var(--ink3);letter-spacing:.04em;margin-bottom:20px}
+.h-badge-dot{width:5px;height:5px;border-radius:50%;background:#E08A1E}
+.h-tag{font-size:13px;font-weight:500;color:rgba(255,255,255,.6);letter-spacing:.02em;margin-bottom:16px;max-width:620px;line-height:1.6}
+.h1{font-size:clamp(38px,5.4vw,66px);font-weight:300;line-height:1.02;letter-spacing:-.05em;color:var(--ink4);margin-bottom:18px;font-style:italic;position:relative}
+.h1 b{font-style:normal;font-weight:800;color:var(--ink);position:relative;display:inline-block}
+.h1 b::after{content:'';position:absolute;left:0;right:0;bottom:.10em;height:.20em;background:linear-gradient(90deg,rgba(224,138,30,.32),rgba(138,79,191,.26),rgba(31,111,178,.26));border-radius:2px;z-index:-1}
+.h-sub{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:10px}
+.h-pill{font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#fff;padding:7px 17px;border-radius:100px;box-shadow:0 2px 8px rgba(0,0,0,.13)}
+.h-sub2{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink4);margin-bottom:20px}
+.h-byline{font-size:14px;font-weight:300;color:var(--ink2);line-height:1.75;max-width:680px;margin-bottom:22px}
+.h-name{font-size:16px;font-weight:800;color:var(--ink);margin-bottom:4px;letter-spacing:-.015em;display:flex;align-items:center;gap:10px}
+.h-name::before{content:'';width:26px;height:2px;background:linear-gradient(90deg,#E08A1E,#8A4FBF);border-radius:1px;flex-shrink:0}
+.h-stmt{font-size:12px;font-weight:300;color:var(--ink3);line-height:1.75;max-width:680px;padding:13px 17px;background:var(--bg2);border-left:3px solid #E08A1E;border-radius:0 4px 4px 0;margin-top:14px}
+.h-rule{display:flex;height:3px;gap:3px;max-width:460px;margin-top:26px;opacity:.9}
+.hr-seg{flex:1;border-radius:2px}
+
+.conf-wrap{padding:30px 32px;background:var(--bg);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr)}
+.conf-head{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink4);margin-bottom:16px}
+.conf-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.conf-item{border-left:3px solid var(--ac);padding:12px 16px;background:var(--bg2);border-radius:0 5px 5px 0}
+.conf-yr{font-size:10px;font-weight:800;letter-spacing:.08em;color:var(--ink4);margin-bottom:4px}
+.conf-t{font-size:13.5px;font-weight:700;color:var(--ink);line-height:1.35;margin-bottom:4px}
+.conf-v{font-size:11.5px;font-weight:400;color:var(--ink3);line-height:1.5}
+.grad-strip{height:3px;background:linear-gradient(90deg,#8A4FBF,#E08A1E,#B85C10,#4A2E73,#1F6FB2,#1A5438,#5B3E9B,#1F6F8B,#B03535)}
+.sec-lbl{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);padding:14px 32px;background:var(--bg3);border-bottom:1px solid var(--bdr)}
+.sec-blk{padding:20px 32px 16px;background:var(--bg3);border-bottom:1px solid var(--bdr);border-top:1px solid var(--bdr)}
+.sec-blk-t{font-size:15px;font-weight:800;color:var(--ink);letter-spacing:-.02em;margin-bottom:4px}
+.sec-blk-d{font-size:12px;font-weight:300;color:var(--ink3);line-height:1.6;max-width:640px}
+.pub-wrap{padding:28px 32px;background:var(--bg);border-bottom:1px solid var(--bdr)}
+.pub-head{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink4);margin-bottom:14px}
+.pub-item{border-left:3px solid #8A4FBF;padding:13px 17px;background:var(--bg2);border-radius:0 5px 5px 0;margin-bottom:10px}
+.pub-t{font-size:13.5px;font-weight:700;color:var(--ink);line-height:1.35;margin-bottom:4px}
+.pub-v{font-size:11.5px;font-weight:400;color:var(--ink3);line-height:1.55}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:2px;background:var(--bdr);border-bottom:2px solid var(--bdr)}
+.card{background:var(--bg);cursor:pointer;transition:.2s;display:flex;flex-direction:column;overflow:hidden}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 34px rgba(0,0,0,.1);z-index:2}
+.card-head{background:var(--ac);padding:0 26px 22px;min-height:150px;display:flex;flex-direction:column;justify-content:flex-end;flex-shrink:0}
+.card-sec{font-size:9px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:rgba(255,255,255,.62);margin-bottom:6px}
+.card-org{font-size:14px;font-weight:700;color:rgba(255,255,255,.95);line-height:1.3}
+.card-body{padding:20px 26px 22px;flex:1;display:flex;flex-direction:column}
+.card-t{font-size:17px;font-weight:700;line-height:1.3;letter-spacing:-.025em;color:var(--ink);margin-bottom:10px}
+.card-d{font-size:12.5px;font-weight:300;color:var(--ink2);line-height:1.65;margin-bottom:16px;flex:1}
+.card-d strong{font-weight:600;color:var(--ink)}
+.card-foot{display:flex;align-items:flex-end;justify-content:space-between;padding-top:13px;border-top:1px solid var(--bdr)}
+.card-ms{display:flex;gap:16px}
+.mn{font-size:18px;font-weight:800;letter-spacing:-.03em;color:var(--ac);display:block;line-height:1}
+.ml{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--ink4);margin-top:3px;display:block}
+.card-arr{font-size:11px;font-weight:600;color:var(--ink4);display:flex;align-items:center;gap:4px;padding:5px 11px;border:1px solid var(--bdr);border-radius:100px;transition:.15s;white-space:nowrap}
+.card:hover .card-arr{background:var(--ac);color:#fff;border-color:var(--ac)}
+.card-arr svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2}
+
+.ip-wrap{padding:34px 32px;background:var(--bg2);border-top:1px solid var(--bdr)}
+.ip-head{display:flex;align-items:center;gap:9px;margin-bottom:15px}
+.ip-pulse{width:7px;height:7px;border-radius:50%;background:#E08A1E;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.ip-lbl{font-size:11px;font-weight:700;color:var(--ink3);letter-spacing:.07em;text-transform:uppercase}
+.ip-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
+.ip-card{border:1px solid var(--bdr);border-radius:5px;padding:15px 17px;background:var(--bg)}
+.ip-cat{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink4);margin-bottom:5px}
+.ip-t{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:5px;line-height:1.3}
+.ip-d{font-size:11.5px;font-weight:300;color:var(--ink3);line-height:1.55}
+.ip-tag{display:inline-block;margin-top:8px;font-size:9px;padding:2px 9px;border-radius:10px;background:#FDF3E0;color:#8A5A10;font-weight:700;border:1px solid #F0DDB0;letter-spacing:.05em;text-transform:uppercase}
+
+.cs-pg{padding-top:54px;min-height:100vh}
+.cs-strip{height:5px;background:var(--ac)}
+.cs-hero{padding:42px 32px 38px;border-bottom:1px solid var(--bdr)}
+.cs-hero-in{max-width:880px;margin:0 auto}
+.cs-ey{font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--ac);margin-bottom:13px;display:flex;align-items:center;gap:8px}
+.cs-ey-dot{width:6px;height:6px;border-radius:50%;background:var(--ac);flex-shrink:0}
+.cs-h1{font-size:clamp(26px,3.9vw,44px);font-weight:800;line-height:1.09;letter-spacing:-.042em;margin-bottom:9px}
+.cs-h1 i{font-style:italic;font-weight:300;color:var(--ink3)}
+.cs-org{font-size:13px;font-weight:400;color:var(--ink3);margin-bottom:16px}
+.st-badge{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:100px;margin-bottom:24px;line-height:1.4}
+.st-done{background:#EDF4F0;color:#2A6647;border:1px solid #BAD5C6}
+.st-live{background:#FDF6EA;color:#8A5A10;border:1px solid #F0DDB0}
+.st-dot{width:6px;height:6px;border-radius:50%}
+.st-done .st-dot{background:#3D7A5C}
+.st-live .st-dot{background:#C97A12;animation:pulse 2s infinite}
+.card-st{display:inline-flex;align-items:center;gap:5px;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:100px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.92);margin-bottom:9px;align-self:flex-start;line-height:1.4}
+.card-st-dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.9)}
+.cs-meta{display:flex;flex-wrap:wrap;border:1px solid var(--bdr);border-radius:5px;overflow:hidden}
+.cs-mi{padding:11px 17px;border-right:1px solid var(--bdr);flex:1;min-width:120px;background:var(--ac-l)}
+.cs-mi:last-child{border-right:none}
+.cs-ml{font-size:8px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ac);margin-bottom:3px;opacity:.9}
+.cs-mv{font-size:12px;font-weight:600;color:var(--ink)}
+
+.ms-wrap{background:var(--ac)}
+.ms-in{max-width:880px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+.ms-box{padding:28px 18px;text-align:center;border-right:1px solid rgba(255,255,255,.13)}
+.ms-box:last-child{border-right:none}
+.ms-n{font-size:34px;font-weight:800;letter-spacing:-.045em;color:#fff;line-height:1;display:block}
+.ms-l{font-size:10px;font-weight:400;color:rgba(255,255,255,.72);margin-top:7px;line-height:1.45;display:block}
+
+.cs-body{max-width:880px;margin:0 auto;padding:0 32px 70px}
+
+.gal{margin:30px 0 0}
+.gal-ey{font-size:9px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--ink4);margin-bottom:11px}
+.gal-scroll{display:flex;gap:10px;overflow-x:auto;padding-bottom:8px;scrollbar-width:thin;scrollbar-color:var(--ac-m) transparent}
+.gal-scroll::-webkit-scrollbar{height:5px}
+.gal-scroll::-webkit-scrollbar-thumb{background:var(--ac-m);border-radius:3px}
+.gs-img{height:190px;width:auto;min-width:300px;border-radius:6px;object-fit:cover;border:1px solid var(--bdr);flex-shrink:0;transition:.2s}
+.gs-img:hover{transform:scale(1.015);box-shadow:0 8px 24px rgba(0,0,0,.11)}
+.gs-cell{position:relative;flex-shrink:0}
+.gs-cell .gs-slot{display:none}
+.gs-cell.empty .gs-img{display:none}
+.gs-cell.empty .gs-slot{display:flex}
+.gs-slot{height:190px;min-width:300px;flex-shrink:0;border:1.5px dashed var(--ac-m);background:var(--ac-l);border-radius:6px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.gs-slot-n{font-size:20px;font-weight:800;color:var(--ac);opacity:.45;letter-spacing:-.03em}
+.gs-slot-t{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ac);opacity:.6}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;background:var(--ac-l);border:1px solid var(--ac-m);border-radius:7px;overflow:hidden;margin:32px 0 0}
+.tc-item{padding:28px 28px}
+.tc-item:first-child{border-right:1px solid var(--ac-m)}
+.tc-ey{font-size:9px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--ac);margin-bottom:10px;display:flex;align-items:center;gap:7px}
+.tc-ey::before{content:'';width:15px;height:2px;background:var(--ac);flex-shrink:0}
+.tc-t{font-size:15px;font-weight:700;letter-spacing:-.015em;color:var(--ink);margin-bottom:11px;line-height:1.32}
+.tc-p{font-size:13px;font-weight:300;color:var(--ink2);line-height:1.82}
+.tc-p strong{font-weight:600;color:var(--ink)}
+.tc-p em{font-style:italic}
+
+.cs-sec{padding:38px 0;border-bottom:1px solid var(--bdr)}
+.cs-sec:last-child{border-bottom:none}
+.cs-sec-ey{font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ac);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.cs-sec-ey::before{content:'';width:17px;height:2px;background:var(--ac);flex-shrink:0}
+.cs-sec-t{font-size:19px;font-weight:700;letter-spacing:-.025em;color:var(--ink);line-height:1.3;margin-bottom:15px}
+.cs-p{font-size:14px;font-weight:300;color:var(--ink2);line-height:1.85;margin-bottom:12px}
+.cs-p strong{font-weight:600;color:var(--ink)}
+.cs-p em{font-style:italic}
+
+.proc{list-style:none;counter-reset:p}
+.proc-li{display:flex;gap:16px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--bdr)}
+.proc-li:last-child{border-bottom:none}
+.proc-n{font-size:11px;font-weight:800;color:var(--ac);background:var(--ac-l);border:1px solid var(--ac-m);border-radius:5px;padding:5px 8px;flex-shrink:0;letter-spacing:.02em;min-width:30px;text-align:center}
+.proc-b{flex:1}
+.proc-t{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:4px;letter-spacing:-.01em}
+.proc-d{font-size:13px;font-weight:300;color:var(--ink2);line-height:1.75}
+
+.impact-sec{background:var(--ac-l);border:1px solid var(--ac-m);border-radius:7px;padding:30px 28px;margin:32px 0 0}
+.sol-sec{border-left:4px solid var(--ac);padding-left:24px;margin:32px 0 0;border-bottom:none}
+.quote{margin:18px 0;padding:17px 21px;border-left:3px solid var(--ac);background:rgba(255,255,255,.7);border-radius:0 5px 5px 0}
+.quote-t{font-size:14px;font-style:italic;font-weight:300;color:var(--ink);line-height:1.75;margin-bottom:7px}
+.quote-a{font-size:9px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink4)}
+.proj-box{margin-top:22px;padding:18px 20px;background:var(--bg);border:1px solid var(--ac-m);border-radius:6px}
+.proj-l{font-size:9px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--ac);margin-bottom:7px}
+.proj-p{font-size:13px;font-weight:300;color:var(--ink2);line-height:1.8}
+.proj-p strong{font-weight:600;color:var(--ink)}
+
+.fw{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1px;background:var(--ac-m);border-radius:6px;overflow:hidden;margin-top:16px}
+.fw-c{background:var(--ac-l);padding:15px 17px}
+.fw-l{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ac);margin-bottom:5px}
+.fw-v{font-size:12px;font-weight:300;color:var(--ink2);line-height:1.6}
+
+.role-box{border:1px solid var(--bdr);border-left:4px solid var(--ac);border-radius:0 6px 6px 0;padding:20px 22px;background:var(--ac-l);margin-top:6px}
+.role-lbl{font-size:8px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--ac);margin-bottom:5px}
+.role-t{font-size:15px;font-weight:800;color:var(--ink);margin-bottom:7px;letter-spacing:-.015em}
+.role-d{font-size:13px;font-weight:300;color:var(--ink2);line-height:1.78}
+.role-ul{list-style:none;margin:0}
+.role-ul li{font-size:13px;font-weight:400;color:var(--ink2);line-height:1.72;padding:9px 0 9px 20px;position:relative;border-bottom:1px solid var(--ac-m)}
+.role-ul li:last-child{border-bottom:none}
+.role-ul li::before{content:'';position:absolute;left:0;top:16px;width:6px;height:6px;border-radius:50%;background:var(--ac)}
+.role-ul li strong{font-weight:600;color:var(--ink)}
+.role-d strong{font-weight:600;color:var(--ink)}
+
+
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:16px}
+.tag{font-size:10px;font-weight:500;padding:4px 11px;border-radius:100px;border:1px solid var(--bdr);color:var(--ink3);background:var(--bg)}
+
+.cs-bot{max-width:880px;margin:0 auto;padding:26px 32px 54px;display:flex;justify-content:space-between;gap:12px;border-top:1px solid var(--bdr)}
+.cs-bot-btn{font-size:12px;font-weight:600;color:var(--ink2);padding:9px 17px;border:1px solid var(--bdr);border-radius:100px;cursor:pointer;transition:.15s;line-height:1.3}
+.cs-bot-btn:hover{background:var(--ac);color:#fff;border-color:var(--ac)}
+
+@media(max-width:680px){
+  nav,.sec-lbl,.ip-wrap,.cs-hero,.cs-body,.cs-bot{padding-left:20px;padding-right:20px}
+  .hero-in{padding:44px 20px 40px}
+  .two-col{grid-template-columns:1fr}
+  .tc-item:first-child{border-right:none;border-bottom:1px solid var(--ac-m)}
+  .ms-in{grid-template-columns:repeat(2,1fr)}
+  .cards{grid-template-columns:1fr}
+  .cs-mi{min-width:50%}
+  .gs-img{height:150px;min-width:240px}
+  .impact-sec{padding:24px 20px}
+}
+</style>
+</head>
+<body>
+<nav>
+<div class="logo" onclick="go('col')"><div class="logo-dot" id="ldot"></div>Behaviour &amp; Insights</div>
+<div style="display:flex;align-items:center;gap:12px">
+<div class="nav-back" id="nbk" onclick="go('col')"><svg viewBox="0 0 16 16"><path d="M10 12L6 8l4-4"/></svg>All case studies</div>
+<div class="nav-tag">Kriti Sahni</div>
+</div>
+</nav>
+<div id="p-col">
+<div class="hero-band"><div class="hero-in">
+<div class="h-badge"><span class="h-badge-dot"></span>Portfolio</div>
+<h1 class="h1"><b>Behaviour</b> and Insights</h1>
+<div class="h-sub">
+<span class="h-pill" style="background:#1F6FB2">Tech</span>
+<span class="h-pill" style="background:#1A5438">Health</span>
+<span class="h-pill" style="background:#8A4FBF">Humans</span>
+</div>
+<div class="h-sub2">Research &nbsp;&amp;&nbsp; Application</div>
+<p class="h-byline">Selected projects across applied behavioural science, SaaS product development and research — spanning digital health, national government programmes, organisational change, education technology and academic research.</p>
+<div class="h-name">Kriti Sahni :)</div>
+<p class="h-stmt">Selected projects are included in this portfolio. Each case study sets out the organisation, the problem, the solution, the measured impact, the process and the skills applied.</p>
+<div class="h-rule">
+<div class="hr-seg" style="background:#8A4FBF"></div><div class="hr-seg" style="background:#E08A1E"></div>
+<div class="hr-seg" style="background:#B85C10"></div><div class="hr-seg" style="background:#4A2E73"></div>
+<div class="hr-seg" style="background:#1F6FB2"></div><div class="hr-seg" style="background:#1A5438"></div>
+<div class="hr-seg" style="background:#5B3E9B"></div><div class="hr-seg" style="background:#1F6F8B"></div>
+<div class="hr-seg" style="background:#B03535"></div></div>
+</div></div>
+<div class="grad-strip"></div>
+<div class="sec-blk"><div class="sec-blk-t">Consulting &amp; Applied Projects</div>
+<div class="sec-blk-d">Client and programme work across digital health, national government programmes, financial services and education technology.</div></div>
+<div class="cards">
+<div class="card cv-purple" onclick="go('nzata')">
+<div class="card-head"><div class="card-st"><span class="card-st-dot"></span>Complete</div><div class="card-sec">Digital Health · Product Behaviour Design</div><div class="card-org">Nazata Bio</div></div>
+<div class="card-body"><div class="card-t">Certifying a Digital Health Product by Designing for Behaviour, Not Features</div><div class="card-d">Behavioural architecture that became part of the regulatory case. The product is <strong>working towards certified medical device status</strong> and <strong>preparing to enter clinical trials in Germany</strong>.</div>
+<div class="card-foot"><div class="card-ms">
+<div><span class="mn">Germany</span><span class="ml">Trials pending</span></div>
+<div><span class="mn">1.28B</span><span class="ml">Global population</span></div>
+<div><span class="mn">&lt;50%</span><span class="ml">Adherence rate</span></div>
+</div><div class="card-arr">Read <svg viewBox="0 0 16 16"><path d="M4 8h8M8 4l4 4-4 4"/></svg></div></div></div></div>
+<div class="card cv-orange" onclick="go('ch')">
+<div class="card-head"><div class="card-st"><span class="card-st-dot"></span>Complete</div><div class="card-sec">Service Design Research · National Programme</div><div class="card-org">Connected Hubs · Western Development Commission</div></div>
+<div class="card-body"><div class="card-t">Who Actually Uses a National Workspace Network, and What Would Make Them Stay</div><div class="card-d">Mixed-methods research across <strong>6,976 data points</strong> producing five behavioural personas and a CX toolkit <strong>adopted across 400+ workspaces</strong> nationwide.</div>
+<div class="card-foot"><div class="card-ms">
+<div><span class="mn">6,976</span><span class="ml">Data points</span></div>
+<div><span class="mn">218</span><span class="ml">Survey responses</span></div>
+<div><span class="mn">20+</span><span class="ml">Managers consulted</span></div>
+</div><div class="card-arr">Read <svg viewBox="0 0 16 16"><path d="M4 8h8M8 4l4 4-4 4"/></svg></div></div></div></div>
+<div class="card cv-burnt" onclick="go('lab')">
+<div class="card-head"><div class="card-st"><span class="card-st-dot"></span>Complete</div><div class="card-sec">Capability Programme · Change &amp; Adoption</div><div class="card-org">Connected Hubs · Western Development Commission</div></div>
+<div class="card-body"><div class="card-t">Building Behavioural Capability Across a National Workspace Network — The Engagement Lab</div><div class="card-d">A six-month longitudinal programme achieving a <strong>92% quality score</strong>, <strong>133% of participation targets</strong> and <strong>88% digital adoption</strong> across 400+ workplaces.</div>
+<div class="card-foot"><div class="card-ms">
+<div><span class="mn">92%</span><span class="ml">Quality score</span></div>
+<div><span class="mn">133%</span><span class="ml">Targets exceeded</span></div>
+<div><span class="mn">88%</span><span class="ml">Adoption rate</span></div>
+</div><div class="card-arr">Read <svg viewBox="0 0 16 16"><path d="M4 8h8M8 4l4 4-4 4"/></svg></div></div></div></div>
+<div class="card cv-plum" onclick="go('aib')">
+<div class="card-head"><div class="card-st"><span class="card-st-dot"></span>In progress</div><div class="card-sec">Organisational Change · Financial Services</div><div class="card-org">A major Irish financial institution — name withheld</div></div>
+<div class="card-body"><div class="card-t">Values in Action: Culture Change Program for 10,000 Staff in Seven Weeks</div><div class="card-d">A culture change programme built entirely from staff discovery data, delivered organisation-wide to <strong>10,000 employees in seven weeks</strong> and rated <strong>Exceeds Expectations</strong>.</div>
+<div class="card-foot"><div class="card-ms">
+<div><span class="mn">10,000</span><span class="ml">Staff reached</span></div>
+<div><span class="mn">7 weeks</span><span class="ml">To full delivery</span></div>
+<div><span class="mn">90+</span><span class="ml">Consulted</span></div>
+</div><div class="card-arr">Read <svg viewBox="0 0 16 16"><path d="M4 8h8M8 4l4 4-4 4"/></svg></div></div></div></div>
+<div class="card cv-blue" onclick="go('actualize')">
+<div class="card-head"><div class="card-st"><span class="card-st-dot"></span>Complete</div><div class="card-sec">EdTech Growth · Analytics &amp; AI</div><div class="card-org">Actualise Academy — a ChangeAble product</div></div>
+<div class="card-body"><div class="card-t">Growing an Online Community from 3,000 to 10,300+ Members</div><div class="card-d">Membership more than tripled and revenue grew <strong>49% year on year</strong>, driven by a single AI-assisted layer that brought scattered metrics into one comparable view.</div>
+<div class="card-foot"><div class="card-ms">
+<div><span class="mn">10,300</span><span class="ml">Members</span></div>
+<div><span class="mn">49%</span><span class="ml">YoY growth</span></div>
+<div><span class="mn">Record</span><span class="ml">Sales period</span></div>
+</div><div class="card-arr">Read <svg viewBox="0 0 16 16"><path d="M4 8h8M8 4l4 4-4 4"/></svg></div></div></div></div>
+</div>
+<div class="sec-blk"><div class="sec-blk-t">SaaS Product Development</div>
+<div class="sec-blk-d">End-to-end SaaS platform development across health technology and talent assessment, working with engineering, design, research and business stakeholders.</div></div>
+<div class="cards">
+<div class="card cv-forest" onclick="go('merge')">
+<div class="card-head"><div class="card-st"><span class="card-st-dot"></span>In progress</div><div class="card-sec">Digital Health Product Engineering · SaaS Development</div><div class="card-org">Projet Merge · ChangeAble Behaviour Solutions</div></div>
+<div class="card-body"><div class="card-t">Projet Merge: A Health Technology Decision-Support System for Frontline Care</div><div class="card-d">A two-surface decision-support system encoding five years of specialist expertise into <strong>23 architected screens</strong> and <strong>10+ decision branches</strong>, resolving in under two minutes.</div>
+<div class="card-foot"><div class="card-ms">
+<div><span class="mn">23</span><span class="ml">Screens</span></div>
+<div><span class="mn">10+</span><span class="ml">Decision branches</span></div>
+<div><span class="mn">2 min</span><span class="ml">Latency target</span></div>
+</div><div class="card-arr">Read <svg viewBox="0 0 16 16"><path d="M4 8h8M8 4l4 4-4 4"/></svg></div></div></div></div>
+<div class="card cv-violet" onclick="go('questa')">
+<div class="card-head"><div class="card-st"><span class="card-st-dot"></span>Complete</div><div class="card-sec">Enterprise SaaS · Product &amp; UX Design</div><div class="card-org">Questa Talent Solutions Pvt. Ltd. · 2023–2024</div></div>
+<div class="card-body"><div class="card-t">Building a Customisable Talent Assessment Platform in a Market That Only Served Enterprise</div><div class="card-d">A full-stack assessment platform with configurable competency architecture, a manager dashboard and automated reporting — built cross-functionally on short cycles. <strong>Promoted Associate to Manager in 8 months</strong>.</div>
+<div class="card-foot"><div class="card-ms">
+<div><span class="mn">4</span><span class="ml">User roles</span></div>
+<div><span class="mn">250+</span><span class="ml">Competencies</span></div>
+<div><span class="mn">8 months</span><span class="ml">To Manager</span></div>
+</div><div class="card-arr">Read <svg viewBox="0 0 16 16"><path d="M4 8h8M8 4l4 4-4 4"/></svg></div></div></div></div>
+</div>
+<div class="sec-blk"><div class="sec-blk-t">Research Experience</div>
+<div class="sec-blk-d">Clinical and academic research conducted with Tallaght University Hospital, the Alzheimer Society of Ireland and Trinity College Dublin&#39;s Centre for Global Health.</div></div>
+<div class="cards">
+<div class="card cv-sky" onclick="go('cities')">
+<div class="card-head"><div class="card-st"><span class="card-st-dot"></span>In progress</div><div class="card-sec">Urban Health Research · Multidisciplinary</div><div class="card-org">Trinity College Dublin · Centre for Global Health</div></div>
+<div class="card-body"><div class="card-t">Cities for Better Health: Researching Health Behaviour Across an Urban Population</div><div class="card-d">Multi-audience research design across a <strong>160+ participant pipeline</strong> spanning children, teachers, institutions and adults, with NVivo analysis informing prevention design.</div>
+<div class="card-foot"><div class="card-ms">
+<div><span class="mn">160+</span><span class="ml">Participants</span></div>
+<div><span class="mn">4</span><span class="ml">Audience groups</span></div>
+<div><span class="mn">NVivo</span><span class="ml">Analysis</span></div>
+</div><div class="card-arr">Read <svg viewBox="0 0 16 16"><path d="M4 8h8M8 4l4 4-4 4"/></svg></div></div></div></div>
+<div class="card cv-red" onclick="go('dementia')">
+<div class="card-head"><div class="card-st"><span class="card-st-dot"></span>Complete</div><div class="card-sec">Clinical Research · Cognitive Rehabilitation</div><div class="card-org">Tallaght University Hospital · Alzheimer Society of Ireland</div></div>
+<div class="card-body"><div class="card-t">Designing Cognitive Rehabilitation for People Living with Early-Stage Dementia</div><div class="card-d">A six-week GREAT-CR intervention designed, delivered and evaluated in a hospital memory clinic. Contributing study <strong>cited in the World Alzheimer Report 2025</strong>.</div>
+<div class="card-foot"><div class="card-ms">
+<div><span class="mn">6 weeks</span><span class="ml">Intervention</span></div>
+<div><span class="mn">Cited</span><span class="ml">World Report</span></div>
+<div><span class="mn">National</span><span class="ml">Funding</span></div>
+</div><div class="card-arr">Read <svg viewBox="0 0 16 16"><path d="M4 8h8M8 4l4 4-4 4"/></svg></div></div></div></div>
+</div>
+<div class="sec-blk">
+<div class="sec-blk-t">Publications &amp; Conference Presentations</div>
+<div class="sec-blk-d">Peer-reviewed contribution, thesis work in preparation for publication, and presentations delivered to professional and policy audiences.</div>
+</div>
+<div class="pub-wrap">
+<div class="pub-head">Publications</div>
+<div class="pub-item">
+<div class="pub-t">Contributing study cited in the World Alzheimer Report 2025</div>
+<div class="pub-v">Alzheimer&#39;s Disease International. Nationally funded study on the accessibility of cognitive rehabilitation in Ireland, delivered with Tallaght University Hospital, the ProBrain Research Lab and the Alzheimer Society of Ireland.</div>
+</div>
+<div class="pub-item" style="border-left-color:#1F6FB2">
+<div class="pub-t">Evaluating the COM-B Model of Behaviour Change: A Mixed-Methods Framework Evaluation Study</div>
+<div class="pub-v">MSc thesis, Trinity College Dublin. Systematic literature review of 50+ peer-reviewed publications integrated with a structured expert practitioner survey using Delphi-adjacent methodology. <strong>In preparation for publication.</strong></div>
+</div>
+</div>
+<div class="conf-wrap">
+<div class="conf-head">Conference presentations</div>
+<div class="conf-grid">
+<div class="conf-item" style="--ac:#8A4FBF">
+<div class="conf-yr">2025 · Psychological Society of Ireland</div>
+<div class="conf-t">Behaviourally Informed Design of a Digital Health Application</div>
+<div class="conf-v">Division of Behaviour Analysis. Applying Self-Determination Theory and behavioural architecture to a digital therapeutic progressing towards medical device certification.</div>
+</div>
+<div class="conf-item" style="--ac:#1F6F8B">
+<div class="conf-yr">2026 · Psychological Society of Ireland</div>
+<div class="conf-t">Applying Behavioural Insights to Practice in Ireland</div>
+<div class="conf-v">Division of Behaviour Analysis. Translating behavioural science into applied digital and service delivery across health, public sector and technology contexts.</div>
+</div>
+<div class="conf-item" style="--ac:#E08A1E">
+<div class="conf-yr">2025 · National Hub Summit</div>
+<div class="conf-t">Behavioural Capability and Digital Adoption in Distributed Workspaces</div>
+<div class="conf-v">Pre-session workshop facilitation on designing behavioural capability and technology adoption across Ireland&#39;s national remote working network.</div>
+</div>
+</div></div>
+<div class="ip-wrap">
+<div class="ip-head"><div class="ip-pulse"></div><div class="ip-lbl">In delivery — reporting pending</div></div>
+<div class="ip-grid">
+<div class="ip-card">
+<div class="ip-cat">Financial Services · Enterprise AI Adoption</div>
+<div class="ip-t">Enterprise Microsoft Copilot Adoption Programme</div>
+<div class="ip-d">Designed the delivery approach for enterprise Copilot adoption for a major Irish financial institution, covering adoption, engagement and safe and ethical use at scale. Moving to contract with scoping underway.</div>
+<span class="ip-tag">Scoping</span>
+</div>
+<div class="ip-card">
+<div class="ip-cat">Agriculture &amp; Sustainability · EU Research</div>
+<div class="ip-t">Project BASEline</div>
+<div class="ip-d">Applying behaviour change methodology to regenerative agriculture adoption through a farmers-educating-farmers peer model, supporting formative research design and stakeholder engagement across a multi-partner programme.</div>
+<span class="ip-tag">Formative</span>
+</div>
+</div></div>
+</div>
+<div id="p-nzata" class="cs-pg cv-purple hidden">
+<div class="cs-strip"></div>
+<div class="cs-hero"><div class="cs-hero-in">
+<div class="cs-ey"><span class="cs-ey-dot"></span>Digital Health · Product Behaviour Design · Ireland · 2024–2025</div>
+<h1 class="cs-h1">Certifying a Digital Health Product<br/><i>by Designing for Behaviour, Not Features</i></h1>
+<div class="cs-org">Nazata Bio — Digital hypertension management platform</div>
+<div class="st-badge st-done"><span class="st-dot"></span>Engagement complete · product out for medical trials</div>
+<div class="cs-meta">
+<div class="cs-mi"><div class="cs-ml">Sector</div><div class="cs-mv">Digital Health / MedTech</div></div>
+<div class="cs-mi"><div class="cs-ml">Regulatory</div><div class="cs-mv">Working towards certified medical device status</div></div>
+<div class="cs-mi"><div class="cs-ml">Next stage</div><div class="cs-mv">Preparing to enter German clinical trials</div></div>
+<div class="cs-mi"><div class="cs-ml">Role</div><div class="cs-mv">Behaviour Design Consultant</div></div>
+</div></div></div>
+<div class="ms-wrap"><div class="ms-in">
+<div class="ms-box"><span class="ms-n">Germany</span><span class="ms-l">Preparing to enter clinical trials in the German market</span></div>
+<div class="ms-box"><span class="ms-n">1.28B</span><span class="ms-l">Adults globally living with hypertension — the addressable clinical population</span></div>
+<div class="ms-box"><span class="ms-n">&lt;50%</span><span class="ms-l">Global medication adherence rate in hypertension — the behavioural failure this product targets</span></div>
+<div class="ms-box"><span class="ms-n">PSI 2025</span><span class="ms-l">Presented at the Psychological Society of Ireland, Division of Behaviour Analysis</span></div>
+</div></div>
+<div class="cs-body">
+<div class="gal"><div class="gal-ey">Project materials</div><div class="gal-scroll">
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="nazata slide 1" src="images/nazata-1.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">01</span><span class="gs-slot-t">nazata-1</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="nazata slide 2" src="images/nazata-2.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">02</span><span class="gs-slot-t">nazata-2</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="nazata slide 3" src="images/nazata-3.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">03</span><span class="gs-slot-t">nazata-3</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="nazata slide 4" src="images/nazata-4.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">04</span><span class="gs-slot-t">nazata-4</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="nazata slide 5" src="images/nazata-5.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">05</span><span class="gs-slot-t">nazata-5</span></div></div>
+</div></div>
+<div class="two-col">
+<div class="tc-item"><div class="tc-ey">The Organisation</div><div class="tc-t">A clinically sound digital health platform that had solved the medical problem and not the human one.</div><p class="tc-p">Nazata Bio is an Irish digital health company building a scalable digital system for personalised high blood pressure lifestyle therapy. The clinical logic was sound, the technical build was competent and the regulatory pathway was mapped.<br/><br/>What the product lacked was a defensible account of <strong>why a patient would open it on day 40</strong>. In a regulated medical device context, sustained engagement is the mechanism through which the product produces its clinical effect — which makes behavioural architecture a <strong>functional requirement of the device</strong>, not a growth concern.</p></div>
+<div class="tc-item"><div class="tc-ey">The Problem</div><div class="tc-t">Hypertension is asymptomatic, so every conventional engagement mechanism works against the grain of motivation.</div><p class="tc-p">Global medication adherence in hypertension sits <strong>below 50%</strong>, and a decade of digital tools has not moved that number. Adherence behaviours in asymptomatic conditions receive <strong>no felt feedback</strong>: the patient who takes their medication and the patient who does not feel identical at the end of the day.<br/><br/>Conventional digital health UX answers this with reminders, streaks and progress bars. These are <strong>compliance mechanisms</strong>, and compliance mechanisms produce a reliable curve — high initial engagement, sharp decline at four to six weeks, abandonment. They position the patient as a subject of surveillance rather than an agent of their own health, which is the precise psychological posture that undermines self-management.</p></div>
+</div>
+<div class="cs-sec sol-sec"><div class="cs-sec-ey">The Solution</div>
+<div class="cs-sec-t">Rebuild the engagement architecture on Self-Determination Theory.</div><p class="cs-p">Rather than adding engagement features to an existing product, the work restructured the psychological logic underneath it and derived features from that logic.<br/><br/>Self-Determination Theory supplied the architecture. Intrinsic motivation — the only kind that survives the absence of external feedback — depends on <strong>autonomy</strong>, <strong>competence</strong> and <strong>relatedness</strong>. Every existing and proposed feature was mapped against these three needs and classified as supporting, neutral or actively undermining. Several features that tested well in conventional usability terms were found to undermine autonomy, and were redesigned rather than removed.<br/><br/>Gamification was reconstructed on the same basis: Health Points, milestone medals and blood pressure drop targets became <strong>competence signals</strong> that make invisible physiological progress legible, rather than extrinsic rewards competing with the behaviour itself.</p></div>
+<div class="cs-sec impact-sec"><div class="cs-sec-ey">The Impact</div>
+<div class="cs-sec-t">The behavioural work became part of the regulatory case, not an adjunct to it.</div><p class="cs-p">Following integration of the behavioural design recommendations, the product is <strong>working towards certified medical device status</strong> and is <strong>preparing to enter clinical trials in Germany</strong>. Behavioural design is usually treated as a retention concern; here it formed part of the evidence that the product does what it claims to do.<br/><br/>The reframe from compliance-based monitoring to autonomy-based engagement changes what the product <em>is</em>: a system that <strong>builds patient capability</strong> rather than one that observes patient failure. In a condition where the clinical effect depends entirely on behaviour sustained over years, that distinction determines whether the device works.<br/><br/>The methodology was presented at the <strong>Psychological Society of Ireland, Division of Behaviour Analysis (2025)</strong>, placing the work into the professional evidence base.</p>
+<div class="proj-box"><div class="proj-l">Long-term projection</div><p class="proj-p"><strong>Longer term.</strong> Hypertension affects approximately 1.28 billion adults worldwide and is the leading modifiable risk factor for cardiovascular mortality. A digital therapeutic that sustains engagement past the six-week abandonment cliff addresses a failure mode common to the entire digital chronic disease category. The German clinical trial pathway opens the EU regulated digital therapeutics market, where reimbursement frameworks such as DiGA increasingly require demonstrated real-world engagement alongside clinical efficacy — a requirement that behavioural architecture, not feature volume, is what actually satisfies.</p></div></div>
+<div class="cs-sec"><div class="cs-sec-ey">Process</div>
+<div class="cs-sec-t">Five stages, end to end.</div><ol class="proc">
+<li class="proc-li"><span class="proc-n">01</span><div class="proc-b"><div class="proc-t">Behavioural product audit</div><div class="proc-d">Systematic evaluation of the existing application against adherence and motivation frameworks, classifying every interaction as supporting, neutral or undermining relative to intrinsic motivation.</div></div></li>
+<li class="proc-li"><span class="proc-n">02</span><div class="proc-b"><div class="proc-t">Cognitive walkthrough</div><div class="proc-d">Structured walkthrough across all primary user journeys, mapping where cognitive load exceeded the capability of the target clinical population.</div></div></li>
+<li class="proc-li"><span class="proc-n">03</span><div class="proc-b"><div class="proc-t">Behavioural architecture redesign</div><div class="proc-d">User journeys, notification logic, progress feedback and social features restructured against the three Self-Determination Theory needs, with gamification rebuilt as competence signalling.</div></div></li>
+<li class="proc-li"><span class="proc-n">04</span><div class="proc-b"><div class="proc-t">Friction reduction design</div><div class="proc-d">Adherence behaviours restructured to remove friction at the daily logging step and align prompts to natural decision windows.</div></div></li>
+<li class="proc-li"><span class="proc-n">05</span><div class="proc-b"><div class="proc-t">Engineering handover</div><div class="proc-d">Findings delivered as prioritised, implementable design recommendations tied to specific interface elements, then integrated into the product build.</div></div></li>
+</ol></div>
+<div class="cs-sec"><div class="cs-sec-ey">Skills &amp; Disciplines Applied</div>
+<div class="cs-sec-t">What this project drew on.</div><div class="fw">
+<div class="fw-c"><div class="fw-l">Digital product design</div><div class="fw-v">Feature-to-mechanism mapping, interaction flow architecture, notification and feedback system design, gamification systems design</div></div>
+<div class="fw-c"><div class="fw-l">Human factors &amp; usability</div><div class="fw-v">Cognitive walkthrough, use-related friction analysis, cognitive load assessment for clinical populations</div></div>
+<div class="fw-c"><div class="fw-l">Applied behavioural science</div><div class="fw-v">Self-Determination Theory, COM-B diagnosis, behaviour change technique selection, habit and reinforcement design</div></div>
+</div></div>
+<div class="cs-sec"><div class="cs-sec-ey">My Contribution</div>
+<div class="cs-sec-t">Behaviour Design Consultant</div>
+<div class="role-box"><div class="role-lbl">Role · Kriti Sahni</div><div class="role-t">Behaviour Design Consultant</div><ul class="role-ul">
+<li>Contributed to a digital health application progressing towards certified medical device status and clinical trials in Germany by applying cognitive walkthrough methods and COM-B behavioural diagnosis to evaluate interface friction across clinical user groups.</li>
+<li>Restructured the product's engagement architecture from compliance-based monitoring to autonomy-based design by applying Self-Determination Theory, mapping every feature against autonomy, competence and relatedness.</li>
+<li>Redesigned gamification mechanisms as competence signals and reduced friction at the daily logging step, delivering prioritised, implementable recommendations directly into the engineering build.</li>
+</ul></div><div class="tags">
+<span class="tag">Product design</span>
+<span class="tag">Cognitive walkthrough</span>
+<span class="tag">Self-Determination Theory</span>
+<span class="tag">COM-B</span>
+<span class="tag">MedTech</span>
+<span class="tag">Conference presenter</span>
+</div></div></div>
+<div class="cs-bot">
+<div class="cs-bot-btn" onclick="go('col')">← All case studies</div>
+<div class="cs-bot-btn" onclick="go('ch')">Who Actually Uses a National Workspace Network →</div>
+</div></div>
+
+<div id="p-ch" class="cs-pg cv-orange hidden">
+<div class="cs-strip"></div>
+<div class="cs-hero"><div class="cs-hero-in">
+<div class="cs-ey"><span class="cs-ey-dot"></span>Service Design Research · National Programme · Ireland · 2024–2025</div>
+<h1 class="cs-h1">Who Actually Uses a National Workspace Network,<br/><i>and What Would Make Them Stay</i></h1>
+<div class="cs-org">Connected Hubs · Western Development Commission · Government of Ireland</div>
+<div class="st-badge st-done"><span class="st-dot"></span>Complete</div>
+<div class="cs-meta">
+<div class="cs-mi"><div class="cs-ml">Sector</div><div class="cs-mv">Government / Future of Work</div></div>
+<div class="cs-mi"><div class="cs-ml">Scale</div><div class="cs-mv">400+ workspaces nationally</div></div>
+<div class="cs-mi"><div class="cs-ml">Output</div><div class="cs-mv">5 behavioural personas + CX toolkit</div></div>
+<div class="cs-mi"><div class="cs-ml">Role</div><div class="cs-mv">Research Analyst · Design Lead</div></div>
+</div></div></div>
+<div class="ms-wrap"><div class="ms-in">
+<div class="ms-box"><span class="ms-n">6,976</span><span class="ms-l">Data points collected and analysed across the national hub network</span></div>
+<div class="ms-box"><span class="ms-n">218</span><span class="ms-l">User survey responses captured across urban, rural and Gaeltacht regions</span></div>
+<div class="ms-box"><span class="ms-n">20+</span><span class="ms-l">Hub managers consulted through semi-structured interviews and field research</span></div>
+<div class="ms-box"><span class="ms-n">5</span><span class="ms-l">Behavioural personas developed, validated and deployed nationally</span></div>
+<div class="ms-box"><span class="ms-n">400+</span><span class="ms-l">Workspaces where the Customer Experience toolkit was adopted</span></div>
+</div></div>
+<div class="cs-body">
+<div class="gal"><div class="gal-ey">Project materials</div><div class="gal-scroll">
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="hubs slide 1" src="images/hubs-1.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">01</span><span class="gs-slot-t">hubs-1</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="hubs slide 2" src="images/hubs-2.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">02</span><span class="gs-slot-t">hubs-2</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="hubs slide 3" src="images/hubs-3.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">03</span><span class="gs-slot-t">hubs-3</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="hubs slide 4" src="images/hubs-4.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">04</span><span class="gs-slot-t">hubs-4</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="hubs slide 5" src="images/hubs-5.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">05</span><span class="gs-slot-t">hubs-5</span></div></div>
+</div></div>
+<div class="two-col">
+<div class="tc-item"><div class="tc-ey">The Organisation</div><div class="tc-t">A national infrastructure programme with 400+ locations and no shared evidence base for who its users were.</div><p class="tc-p">Connected Hubs is the Government of Ireland’s national remote working infrastructure programme, delivered with the Western Development Commission. It spans <strong>400+ registered locations</strong> across cities, market towns, coastal communities and Gaeltacht regions, serving corporate remote employees, sole traders, freelancers, community organisations and rural entrepreneurs.<br/><br/>The capital investment had been made. What had not been built was the <strong>evidence infrastructure</strong>: any systematic account of who was walking through those doors, what kept them and what quietly drove them away.</p></div>
+<div class="tc-item"><div class="tc-ey">The Problem</div><div class="tc-t">Four hundred managers were making the same commercial decisions from intuition, in isolation, with no way to learn from each other.</div><p class="tc-p">Hub managers were making genuinely difficult commercial decisions — pricing, event programming, marketing spend, onboarding design — <strong>entirely from instinct</strong>, because no diagnostic framework existed for them to use.<br/><br/>The consequence compounded in two directions. Individually, managers repeatedly solved the same problem without understanding <em>why</em> it recurred, so the solution never held. At network level, a strategy that worked in an urban enterprise hub failed in a rural community hub and <strong>no shared vocabulary existed to explain the difference</strong>. Four hundred managers were independently rediscovering the same lessons with no mechanism to capture any of it.<br/><br/>Underneath sat a measurement problem: the available data described users <strong>demographically</strong>, and demographics do not predict behaviour. Two users with identical profiles could hold opposed motivations, and designing for their average served neither.</p></div>
+</div>
+<div class="cs-sec sol-sec"><div class="cs-sec-ey">The Solution</div>
+<div class="cs-sec-t">A multi-method research study producing five psychologically grounded personas and an operational toolkit built on them.</div><p class="cs-p">The study was designed to produce something a hub manager could <em>use on a Tuesday</em>, and that constraint shaped the method throughout.<br/><br/>Qualitative depth and quantitative breadth were combined deliberately: interviews and ethnographic observation surfaced motivational texture that surveys systematically miss, while a network-wide survey established which patterns held at scale.<br/><br/>The output was <strong>five behavioural personas</strong> — the Time-Tied Trooper, Autonomous Agent, Entrepreneurial Explorer, Creative Cadet and Emerging Enigma. Each captures motivational architecture, decision triggers, friction points, communication preferences and the <strong>specific moments at which hub habits are most likely to change</strong> in either direction.<br/><br/>These became the backbone of a <strong>Customer Experience toolkit</strong> deployed nationally: journey maps, engagement checklists, communication templates and segmentation guides written so a manager with no behavioural science training could apply them immediately.</p></div>
+<div class="cs-sec impact-sec"><div class="cs-sec-ey">The Impact</div>
+<div class="cs-sec-t">The research replaced intuition with a shared national vocabulary across 400+ operators.</div><p class="cs-p">The toolkit was <strong>adopted across 400+ workspaces nationwide</strong>. Decisions about events, pricing, marketing and onboarding could now be made by asking a specific, answerable question: <em>which persona are we designing for, and where in their journey are we intervening?</em><br/><br/>The more durable outcome was linguistic. A network of 400 isolated operators acquired a <strong>shared vocabulary</strong> for describing their users — which is what makes knowledge transferable between hubs. A manager in Donegal and a manager in Dublin can now describe the same user type in the same terms and compare what worked. The research converted 400 separate learning curves into one.<br/><br/>Hub managers continued referencing the personas as a working planning tool months after the research concluded, and the study became the <strong>foundational evidence base for the Engagement Lab</strong>.</p>
+<div class="quote"><p class="quote-t">A key highlight of the summit was Padraig Walsh from ChangeAble Behaviour Solutions, who presented his standout research on hub user profiles, offering valuable insights into how different user groups engage with hubs and what drives their decision-making.</p><div class="quote-a">— Western Development Commission Report, 2024</div></div>
+<div class="proj-box"><div class="proj-l">Long-term projection</div><p class="proj-p"><strong>Longer term.</strong> The persona framework is extensible: as remote work patterns evolve, new segments can be added against the same behavioural architecture rather than requiring a fresh study. The methodology transfers directly to other distributed public infrastructure — libraries, enterprise centres, community facilities and regional innovation hubs — where the same structural problem recurs: significant capital investment in physical infrastructure, minimal investment in understanding the behaviour that determines whether it is used.</p></div></div>
+<div class="cs-sec"><div class="cs-sec-ey">Process</div>
+<div class="cs-sec-t">Five stages, end to end.</div><ol class="proc">
+<li class="proc-li"><span class="proc-n">01</span><div class="proc-b"><div class="proc-t">Mixed-methods research design</div><div class="proc-d">Study designed to combine qualitative depth and quantitative breadth, with instruments built per data source and an explicit requirement that outputs be operationally usable by non-specialists.</div></div></li>
+<li class="proc-li"><span class="proc-n">02</span><div class="proc-b"><div class="proc-t">Field data collection</div><div class="proc-d">Semi-structured interviews and ethnographic observation across urban, rural, enterprise and community hub contexts, alongside a network-wide quantitative survey.</div></div></li>
+<li class="proc-li"><span class="proc-n">03</span><div class="proc-b"><div class="proc-t">Analysis and integration</div><div class="proc-d">Inductive thematic analysis of qualitative data integrated with descriptive statistics and cross-tabulation of survey responses to produce behaviourally coherent segments.</div></div></li>
+<li class="proc-li"><span class="proc-n">04</span><div class="proc-b"><div class="proc-t">Persona development and validation</div><div class="proc-d">Five personas constructed from the integrated dataset and validated against the COM-B model to ensure each pointed toward actionable intervention rather than description.</div></div></li>
+<li class="proc-li"><span class="proc-n">05</span><div class="proc-b"><div class="proc-t">Toolkit design and national rollout</div><div class="proc-d">Customer journey maps, engagement frameworks and the full CX toolkit designed, produced and distributed across the 400+ hub network.</div></div></li>
+</ol></div>
+<div class="cs-sec"><div class="cs-sec-ey">Skills &amp; Disciplines Applied</div>
+<div class="cs-sec-t">What this project drew on.</div><div class="fw">
+<div class="fw-c"><div class="fw-l">Service design</div><div class="fw-v">Behavioural persona development, customer journey mapping, service blueprinting, touchpoint and friction analysis, toolkit information architecture</div></div>
+<div class="fw-c"><div class="fw-l">Research methods</div><div class="fw-v">Mixed-methods design, semi-structured interviewing, ethnographic observation, inductive thematic analysis, descriptive statistics, cross-tabulation</div></div>
+<div class="fw-c"><div class="fw-l">Design &amp; visual communication</div><div class="fw-v">Report and toolkit design, persona profile production, accessible communication design for non-specialist audiences</div></div>
+</div></div>
+<div class="cs-sec"><div class="cs-sec-ey">My Contribution</div>
+<div class="cs-sec-t">Research Analyst · Design and Production Lead</div>
+<div class="role-box"><div class="role-lbl">Role · Kriti Sahni</div><div class="role-t">Research Analyst · Design and Production Lead</div><ul class="role-ul">
+<li>Led service design research for Connected Hubs, Ireland's national remote-working network, running semi-structured interviews and ethnographic observation across 6,976 data points and 218 user responses.</li>
+<li>Produced five behavioural personas validated against COM-B, and a Customer Experience toolkit adopted across 400+ workspaces nationwide.</li>
+<li>Delivered qualitative coding, thematic analysis and quantitative cross-tabulation, integrating findings across data sources into the persona development process.</li>
+</ul></div><div class="tags">
+<span class="tag">Service design</span>
+<span class="tag">Mixed-methods research</span>
+<span class="tag">Thematic analysis</span>
+<span class="tag">Journey mapping</span>
+<span class="tag">Persona development</span>
+<span class="tag">Visual design</span>
+</div></div></div>
+<div class="cs-bot">
+<div class="cs-bot-btn" onclick="go('nzata')">← Certifying a Digital Health Product</div>
+<div class="cs-bot-btn" onclick="go('lab')">Building Behavioural Capability Across →</div>
+</div></div>
+
+<div id="p-lab" class="cs-pg cv-burnt hidden">
+<div class="cs-strip"></div>
+<div class="cs-hero"><div class="cs-hero-in">
+<div class="cs-ey"><span class="cs-ey-dot"></span>Capability Programme · Change &amp; Adoption · Ireland · 2025–2026</div>
+<h1 class="cs-h1">Building Behavioural Capability Across<br/><i>a National Workspace Network — The Engagement Lab</i></h1>
+<div class="cs-org">Connected Hubs · Western Development Commission</div>
+<div class="st-badge st-done"><span class="st-dot"></span>Complete</div>
+<div class="cs-meta">
+<div class="cs-mi"><div class="cs-ml">Sector</div><div class="cs-mv">Government / Capability Building</div></div>
+<div class="cs-mi"><div class="cs-ml">Duration</div><div class="cs-mv">6-month longitudinal programme</div></div>
+<div class="cs-mi"><div class="cs-ml">Cohort</div><div class="cs-mv">16 hub managers</div></div>
+<div class="cs-mi"><div class="cs-ml">Role</div><div class="cs-mv">Project Manager · Impact Analyst</div></div>
+</div></div></div>
+<div class="ms-wrap"><div class="ms-in">
+<div class="ms-box"><span class="ms-n">92%</span><span class="ms-l">Overall programme quality score from participant evaluation</span></div>
+<div class="ms-box"><span class="ms-n">133%</span><span class="ms-l">Participation targets exceeded across the programme</span></div>
+<div class="ms-box"><span class="ms-n">88%</span><span class="ms-l">Digital product adoption rate achieved across participating organisations</span></div>
+<div class="ms-box"><span class="ms-n">400+</span><span class="ms-l">Workplaces reached through the national network</span></div>
+</div></div>
+<div class="cs-body">
+<div class="gal"><div class="gal-ey">Project materials</div><div class="gal-scroll">
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="lab slide 1" src="images/lab-1.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">01</span><span class="gs-slot-t">lab-1</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="lab slide 2" src="images/lab-2.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">02</span><span class="gs-slot-t">lab-2</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="lab slide 3" src="images/lab-3.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">03</span><span class="gs-slot-t">lab-3</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="lab slide 4" src="images/lab-4.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">04</span><span class="gs-slot-t">lab-4</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="lab slide 5" src="images/lab-5.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">05</span><span class="gs-slot-t">lab-5</span></div></div>
+</div></div>
+<div class="two-col">
+<div class="tc-item"><div class="tc-ey">The Organisation</div><div class="tc-t">Ireland’s national remote working network, and the gap between having infrastructure and knowing how to use it.</div><p class="tc-p">The Engagement Lab was commissioned as the operational answer to the persona research that preceded it. The research established <em>who</em> was using the national hub network and <em>why</em>. The Engagement Lab existed to answer the harder question: how do you get <strong>400 independent operators</strong> to change what they do on Monday morning.<br/><br/>This is a change management problem before it is a training problem. Hub managers are not employees of a central organisation — they cannot be mandated or performance-managed into new behaviour. Any intervention had to work through <strong>voluntary adoption</strong>.</p></div>
+<div class="tc-item"><div class="tc-ey">The Problem</div><div class="tc-t">Traditional professional development fails for exactly the population that needs it most: isolated operators with no time and no peers.</div><p class="tc-p">Conventional capability programmes assume protected time, an organisational mandate, colleagues to discuss material with and a manager tracking completion. A hub manager has <strong>none of these</strong> — frequently the entire staff of their organisation, working reactively, with no peer group.<br/><br/>The result across the sector is well documented: high sign-up, sharp attrition at week three, near-zero behavioural transfer. Content is consumed and never applied, because the programme ends where the difficult work of application begins.<br/><br/>Compounding this, frameworks delivered abstractly do not survive contact with a specific commercial context. The translation step — from framework to <em>this</em> hub, <em>this</em> segment, <em>this</em> Tuesday — is where almost all capability programmes silently fail, and it is the step almost none are designed to support.</p></div>
+</div>
+<div class="cs-sec sol-sec"><div class="cs-sec-ey">The Solution</div>
+<div class="cs-sec-t">A longitudinal community of practice with application built into its structure, not left to the participant afterwards.</div><p class="cs-p">The Engagement Lab was designed as a <strong>Longitudinal Innovation Intensive Development</strong> model. Participants were treated not as a training audience but as a <strong>distributed research network</strong> generating evidence together.<br/><br/>Between sessions, participants ran live engagement experiments in their own hubs and brought <strong>real data back to the cohort</strong> for collective analysis. This inverted the usual failure mode: application was not left to the participant after the programme ended, it was the mechanism through which the programme operated.<br/><br/>Delivery ran across <strong>five integrated modalities</strong> — a self-paced platform, three facilitated live sessions, an in-person workshop day, peer-led Practice Pod capstones and individual coaching — each carrying a distinct function rather than repeating content in different formats.<br/><br/>An <strong>AI workflow integration component</strong> was built into the curriculum, piloted with approximately 22 hubs and small businesses whose owners had little prior exposure to digital systems. The population least likely to adopt AI tools independently is the population for whom the productivity gain is largest.</p></div>
+<div class="cs-sec impact-sec"><div class="cs-sec-ey">The Impact</div>
+<div class="cs-sec-t">The programme exceeded every participation target and produced measurable commercial change in participating businesses.</div><p class="cs-p">The programme achieved a <strong>92% overall quality score</strong>, <strong>exceeded participation targets by 133%</strong> and reached an <strong>88% adoption rate</strong> for the digital tools introduced. Community data showed <strong>78.6% of posts receiving replies</strong> at an average of <strong>6.3 replies per active thread</strong> — sustained peer dialogue rather than passive consumption.<br/><br/>Commercial outcomes reported by participants were substantial. One hub ran a second iteration of an event following the programme and recorded <strong>twice the vendors, twice the attendees and double the revenue</strong>, alongside a significant increase in five-star reviews generated through newly implemented feedback touchpoints.</p>
+<div class="quote"><p class="quote-t">Running a second iteration of an event post-Engagement Lab resulted in twice as many vendors, twice as many attendees, and double the revenue. Implementing additional consumer feedback touchpoints led to a significant increase in 5-star Google reviews and generated valuable testimonials now being repurposed in digital marketing strategies.</p><div class="quote-a">— Hub Manager · Post-Programme Feedback, April 2026</div></div>
+<div class="quote"><p class="quote-t">The knowledge that Padraig brought with Kriti, backed up by the interactions with other hub members, was a key outcome.</p><div class="quote-a">— Andrew Whitaker, Culture City &amp; Culture Co-Working · Evaluation Survey, 2026</div></div>
+<div class="proj-box"><div class="proj-l">Long-term projection</div><p class="proj-p"><strong>Longer term.</strong> The programme created a standing peer network that continues to operate independently of any facilitated session — the difference between a training intervention and durable capability infrastructure. The LIID model is replicable across any distributed network of independent operators facing common problems in isolation: franchise networks, community enterprise, regional development programmes, primary care practices. A pre-session workshop was facilitated at the <strong>National Hub Summit 2025</strong>, positioning the model within national policy conversation.</p></div></div>
+<div class="cs-sec"><div class="cs-sec-ey">Process</div>
+<div class="cs-sec-t">Five stages, end to end.</div><ol class="proc">
+<li class="proc-li"><span class="proc-n">01</span><div class="proc-b"><div class="proc-t">Programme architecture design</div><div class="proc-d">Five-modality blended structure designed so each format performed a distinct function — content, application, trust-building, peer generation and individual coaching kept deliberately separate.</div></div></li>
+<li class="proc-li"><span class="proc-n">02</span><div class="proc-b"><div class="proc-t">Curriculum and AI module build</div><div class="proc-d">Behavioural frameworks translated into hub-specific application, with an AI workflow integration module piloted for owners with minimal prior digital systems exposure.</div></div></li>
+<li class="proc-li"><span class="proc-n">03</span><div class="proc-b"><div class="proc-t">Delivery and facilitation</div><div class="proc-d">Six-month delivery across platform, live sessions, in-person workshop, peer capstone pods and one-to-one coaching, with operations managed end to end across all 16 participants.</div></div></li>
+<li class="proc-li"><span class="proc-n">04</span><div class="proc-b"><div class="proc-t">Engagement measurement</div><div class="proc-d">Participant activity tracked across module completion, submission rates, attendance and community contribution, with discussions coded by comment type to test whether genuine peer knowledge exchange was occurring.</div></div></li>
+<li class="proc-li"><span class="proc-n">05</span><div class="proc-b"><div class="proc-t">Evaluation and impact reporting</div><div class="proc-d">Multi-instrument evaluation combining quantitative scoring and qualitative synthesis, compiled into the final impact report submitted to the Western Development Commission.</div></div></li>
+</ol></div>
+<div class="cs-sec"><div class="cs-sec-ey">Skills &amp; Disciplines Applied</div>
+<div class="cs-sec-t">What this project drew on.</div><div class="fw">
+<div class="fw-c"><div class="fw-l">Change management</div><div class="fw-v">Voluntary adoption design, sustained-use mechanism design, stakeholder governance, distributed network change, advocacy as an outcome measure</div></div>
+<div class="fw-c"><div class="fw-l">Programme &amp; project management</div><div class="fw-v">End-to-end programme delivery, multi-modality design, participant pipeline management, milestone governance, budget and timeline ownership</div></div>
+<div class="fw-c"><div class="fw-l">Impact measurement &amp; evaluation</div><div class="fw-v">Evaluation instrument design, longitudinal engagement tracking, discourse coding, quantitative scoring, impact report authoring for a government client</div></div>
+</div></div>
+<div class="cs-sec"><div class="cs-sec-ey">My Contribution</div>
+<div class="cs-sec-t">Project Manager · Impact Analyst · Data Analyst</div>
+<div class="role-box"><div class="role-lbl">Role · Kriti Sahni</div><div class="role-t">Project Manager · Impact Analyst · Data Analyst</div><ul class="role-ul">
+<li>Delivered a six-month national capability programme achieving a 92% quality score, exceeding participation targets by 133% and reaching an 88% digital adoption rate across 400+ workplaces.</li>
+<li>Managed end-to-end programme operations across five delivery modalities and a 16-participant cohort, including logistics, communications, platform administration and one-to-one coaching.</li>
+<li>Designed and executed the impact measurement framework, coding community discussions by comment type and tracking engagement across the cohort.</li>
+</ul></div><div class="tags">
+<span class="tag">Change management</span>
+<span class="tag">Programme delivery</span>
+<span class="tag">Impact measurement</span>
+<span class="tag">Stakeholder management</span>
+<span class="tag">AI adoption</span>
+<span class="tag">Data analysis</span>
+</div></div></div>
+<div class="cs-bot">
+<div class="cs-bot-btn" onclick="go('ch')">← Who Actually Uses a National Workspace Network</div>
+<div class="cs-bot-btn" onclick="go('aib')">Values in Action →</div>
+</div></div>
+
+<div id="p-aib" class="cs-pg cv-plum hidden">
+<div class="cs-strip"></div>
+<div class="cs-hero"><div class="cs-hero-in">
+<div class="cs-ey"><span class="cs-ey-dot"></span>Organisational Change · Financial Services · Ireland · 2025–2026</div>
+<h1 class="cs-h1">Values in Action:<br/><i>Culture Change Program for 10,000 Staff in Seven Weeks</i></h1>
+<div class="cs-org">A major Irish financial institution — name withheld under client confidentiality</div>
+<div class="st-badge st-live"><span class="st-dot"></span>In progress</div>
+<div class="cs-meta">
+<div class="cs-mi"><div class="cs-ml">Sector</div><div class="cs-mv">Financial Services</div></div>
+<div class="cs-mi"><div class="cs-ml">Scale</div><div class="cs-mv">10,000 employees</div></div>
+<div class="cs-mi"><div class="cs-ml">Timeline</div><div class="cs-mv">7 weeks, discovery to full delivery</div></div>
+<div class="cs-mi"><div class="cs-ml">Role</div><div class="cs-mv">Lead Strategist · Delivery Agent</div></div>
+</div></div></div>
+<div class="ms-wrap"><div class="ms-in">
+<div class="ms-box"><span class="ms-n">10,000</span><span class="ms-l">Employees reached across the full organisation</span></div>
+<div class="ms-box"><span class="ms-n">7 weeks</span><span class="ms-l">From first discovery workshop to complete organisation-wide delivery</span></div>
+<div class="ms-box"><span class="ms-n">90+</span><span class="ms-l">Employees consulted in 45-minute discovery focus groups</span></div>
+<div class="ms-box"><span class="ms-n">Exceeds</span><span class="ms-l">Rating scored in internal engagement measurement</span></div>
+</div></div>
+<div class="cs-body">
+<div class="gal"><div class="gal-ey">Project materials</div><div class="gal-scroll">
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="values slide 1" src="images/values-1.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">01</span><span class="gs-slot-t">values-1</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="values slide 2" src="images/values-2.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">02</span><span class="gs-slot-t">values-2</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="values slide 3" src="images/values-3.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">03</span><span class="gs-slot-t">values-3</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="values slide 4" src="images/values-4.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">04</span><span class="gs-slot-t">values-4</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="values slide 5" src="images/values-5.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">05</span><span class="gs-slot-t">values-5</span></div></div>
+</div></div>
+<div class="two-col">
+<div class="tc-item"><div class="tc-ey">The Organisation</div><div class="tc-t">Ireland’s largest financial institution, undertaking values-led cultural transformation at enterprise scale.</div><p class="tc-p">The client is one of Ireland’s largest financial institutions, employing approximately 10,000 people across retail, corporate, operations and technology functions. The organisation was in a period of strategic cultural realignment and had done the substantial work of articulating its values clearly.<br/><br/>The brief was precise and unusually honest. Leadership did not want another communications campaign. They wanted the values to become <strong>observable in everyday decision-making</strong> — visible in how a colleague handles an awkward trade-off when nobody senior is watching.</p></div>
+<div class="tc-item"><div class="tc-ey">The Problem</div><div class="tc-t">Organisational values are almost universally communicated and almost universally ignored. The failure is structural.</div><p class="tc-p">Every large organisation has values, drafted carefully and communicated repeatedly. Recall is typically reasonable; behavioural influence is typically negligible.<br/><br/>Values do not operate in the situations where they are communicated. They operate in <strong>ambiguity</strong> — where two legitimate priorities conflict, where the fair action is slower than the expedient one. A poster cannot reach that moment because it describes values in the abstract, and the abstract is not where the decision happens.<br/><br/>Most values programmes are also facilitator-dependent, restricting them to senior cohorts and making 10,000-person reach economically impossible. There was a further credibility constraint: 10,000 employees have finely calibrated detectors for corporate content that does not describe their working reality. Generic externally-written scenarios would be identified within thirty seconds and fail on contact.</p></div>
+</div>
+<div class="cs-sec sol-sec"><div class="cs-sec-ey">The Solution</div>
+<div class="cs-sec-t">Build the intervention entirely from staff data, then deliver it as a branching scenario game requiring no facilitator.</div><p class="cs-p">The programme was built in two phases, and the sequence mattered more than either phase alone.<br/><br/><strong>Discovery first.</strong> Before any scenario was written, 45-minute facilitated focus groups were run with <strong>90+ employees</strong> to surface what the values look like when enacted, and what they look like when quietly compromised. Staff described real tensions from their own working lives, producing raw material no external curriculum could supply.<br/><br/><strong>Then narrative design.</strong> Findings were translated into <strong>Values in Action</strong>, a branching scenario game in which players navigate a character through workplace dilemmas drawn directly from that data. At each decision point the player chooses, encounters a consequence and is prompted to reflect — engaging intuitive judgement through narrative and deliberate reasoning through structured reflection.<br/><br/>Delivery was designed for <strong>self-directed asynchronous deployment</strong>, removing the facilitation bottleneck and making 10,000-person reach achievable in seven weeks rather than eighteen months.</p></div>
+<div class="cs-sec impact-sec"><div class="cs-sec-ey">The Impact</div>
+<div class="cs-sec-t">Full organisational reach in seven weeks, with content staff recognised as their own.</div><p class="cs-p">The programme reached <strong>all 10,000 employees within seven weeks</strong> of discovery commencing and scored an <strong>Exceeds Expectations</strong> rating in internal engagement measurement. For a values intervention at enterprise scale in a regulated financial institution, that timeline is the headline operational result — achievable only because the facilitation dependency had been designed out.<br/><br/>The substantive outcome was recognition. Staff encountered scenarios that felt real because they <em>were</em> real, drawn from 90+ colleagues’ described experience. That recognition separates an intervention people complete from one people discuss afterwards, and it was a direct product of sequencing discovery before design.<br/><br/>The deeper result is a <strong>shared organisational vocabulary</strong> for values tensions. The situations now have names, the tensions have been rehearsed collectively, and the conversation has a starting point.</p>
+<div class="proj-box"><div class="proj-l">Long-term projection</div><p class="proj-p"><strong>Longer term.</strong> The discovery-to-narrative methodology transfers to any organisation-wide behavioural challenge where the gap is application rather than awareness: conduct risk, psychological safety, inclusive behaviour, safety culture. Because the scenario architecture is modular, the same delivery infrastructure can carry new content without rebuilding. Following this programme, a further engagement was scoped with the same client on <strong>enterprise Microsoft Copilot adoption</strong>, covering adoption, engagement and safe and ethical use at scale.</p></div></div>
+<div class="cs-sec"><div class="cs-sec-ey">Process</div>
+<div class="cs-sec-t">Five stages, end to end.</div><ol class="proc">
+<li class="proc-li"><span class="proc-n">01</span><div class="proc-b"><div class="proc-t">Discovery focus groups</div><div class="proc-d">45-minute facilitated group elicitation sessions with 90+ employees across the organisation, designed to extract lived behavioural data on values enactment and compromise within severe constraints on staff time.</div></div></li>
+<li class="proc-li"><span class="proc-n">02</span><div class="proc-b"><div class="proc-t">Data analysis and theme selection</div><div class="proc-d">Systematic coding of discovery output to identify the recurring values tensions with the highest behavioural frequency and organisational consequence.</div></div></li>
+<li class="proc-li"><span class="proc-n">03</span><div class="proc-b"><div class="proc-t">Scenario architecture design</div><div class="proc-d">Coded findings translated into a branching decision structure with multiple pathways and endings, each branch representing a genuinely defensible choice rather than an obvious right answer.</div></div></li>
+<li class="proc-li"><span class="proc-n">04</span><div class="proc-b"><div class="proc-t">Build and stakeholder alignment</div><div class="proc-d">Interactive product built and aligned across HR, communications and senior leadership throughout scoping, development and sign-off.</div></div></li>
+<li class="proc-li"><span class="proc-n">05</span><div class="proc-b"><div class="proc-t">Organisation-wide rollout and reporting</div><div class="proc-d">Self-directed asynchronous deployment across all 10,000 staff within seven weeks, followed by structured evaluation and impact reporting to senior stakeholders.</div></div></li>
+</ol></div>
+<div class="cs-sec"><div class="cs-sec-ey">Skills &amp; Disciplines Applied</div>
+<div class="cs-sec-t">What this project drew on.</div><div class="fw">
+<div class="fw-c"><div class="fw-l">Change management</div><div class="fw-v">Enterprise culture change, discovery-to-delivery methodology, adoption mechanism design, executive stakeholder alignment, organisation-wide rollout</div></div>
+<div class="fw-c"><div class="fw-l">Learning &amp; experience design</div><div class="fw-v">Scenario-based learning design, branching narrative architecture, reflective practice design, asynchronous self-directed delivery at scale</div></div>
+<div class="fw-c"><div class="fw-l">Facilitation &amp; qualitative analysis</div><div class="fw-v">Group elicitation facilitation, focus group design, qualitative coding, translating frontline data into executive-facing design decisions</div></div>
+</div></div>
+<div class="cs-sec"><div class="cs-sec-ey">My Contribution</div>
+<div class="cs-sec-t">Lead Strategist · Delivery Agent</div>
+<div class="role-box"><div class="role-lbl">Role · Kriti Sahni</div><div class="role-t">Lead Strategist · Delivery Agent</div><ul class="role-ul">
+<li>Led strategy and delivery of a culture change programme for a major Irish financial institution, reaching 10,000 staff and moving from discovery to full organisation-wide delivery in seven weeks.</li>
+<li>Designed the discovery methodology and facilitated 45-minute focus groups with 90+ employees, translating findings into a branching scenario-based behavioural intervention.</li>
+<li>Acted as primary client contact and lead delivery agent, managing stakeholder alignment across HR, communications and senior leadership from scoping to organisation-wide rollout.</li>
+</ul></div><div class="tags">
+<span class="tag">Change management</span>
+<span class="tag">Culture change</span>
+<span class="tag">Facilitation</span>
+<span class="tag">Experience design</span>
+<span class="tag">Stakeholder management</span>
+<span class="tag">Financial services</span>
+</div></div></div>
+<div class="cs-bot">
+<div class="cs-bot-btn" onclick="go('lab')">← Building Behavioural Capability Across</div>
+<div class="cs-bot-btn" onclick="go('actualize')">Growing an Online Community →</div>
+</div></div>
+
+<div id="p-actualize" class="cs-pg cv-blue hidden">
+<div class="cs-strip"></div>
+<div class="cs-hero"><div class="cs-hero-in">
+<div class="cs-ey"><span class="cs-ey-dot"></span>EdTech Growth · Analytics &amp; AI · Ireland · 2025–Present</div>
+<h1 class="cs-h1">Growing an Online Community<br/><i>from 3,000 to 10,300+ Members</i></h1>
+<div class="cs-org">Actualise Academy — a ChangeAble product · EPV-accredited CPD platform</div>
+<div class="st-badge st-done"><span class="st-dot"></span>Complete</div>
+<div class="cs-meta">
+<div class="cs-mi"><div class="cs-ml">Sector</div><div class="cs-mv">EdTech / Professional Development</div></div>
+<div class="cs-mi"><div class="cs-ml">Accreditation</div><div class="cs-mv">EPV-approved, Department of Education</div></div>
+<div class="cs-mi"><div class="cs-ml">Audience</div><div class="cs-mv">Irish teachers, SNAs and early-years practitioners</div></div>
+<div class="cs-mi"><div class="cs-ml">Role</div><div class="cs-mv">Insights and Growth Analyst</div></div>
+</div></div></div>
+<div class="ms-wrap"><div class="ms-in">
+<div class="ms-box"><span class="ms-n">10,300</span><span class="ms-l">Active members and growing, from a base of 3,000</span></div>
+<div class="ms-box"><span class="ms-n">49%</span><span class="ms-l">Year-on-year revenue growth delivered</span></div>
+<div class="ms-box"><span class="ms-n">Record</span><span class="ms-l">Highest sales period in the academy’s history to date</span></div>
+<div class="ms-box"><span class="ms-n">16</span><span class="ms-l">Courses tracked and optimised across the platform</span></div>
+</div></div>
+<div class="cs-body">
+<div class="gal"><div class="gal-ey">Project materials</div><div class="gal-scroll">
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="actualise slide 1" src="images/actualise-1.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">01</span><span class="gs-slot-t">actualise-1</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="actualise slide 2" src="images/actualise-2.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">02</span><span class="gs-slot-t">actualise-2</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="actualise slide 3" src="images/actualise-3.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">03</span><span class="gs-slot-t">actualise-3</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="actualise slide 4" src="images/actualise-4.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">04</span><span class="gs-slot-t">actualise-4</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="actualise slide 5" src="images/actualise-5.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">05</span><span class="gs-slot-t">actualise-5</span></div></div>
+</div></div>
+<div class="two-col">
+<div class="tc-item"><div class="tc-ey">The Organisation</div><div class="tc-t">Ireland’s specialist behaviour-led CPD platform, built by practising clinicians rather than content producers.</div><p class="tc-p">Actualise Academy is an EPV-accredited online professional development platform serving Irish teachers, SNAs and early-years practitioners. Its sixteen courses span behaviour support, anxiety management, autism-inclusive practice, teacher wellbeing and neuroscience-informed teaching.<br/><br/>The founding premise was that Irish educators needed CPD designed by <strong>practising behaviour specialists</strong> rather than generic content providers, and the content quality reflected that. What had not kept pace was the commercial and analytical infrastructure required to convert quality into sustained growth.</p></div>
+<div class="tc-item"><div class="tc-ey">The Problem</div><div class="tc-t">Excellent content, thousands of members, and no visibility into why anyone was buying.</div><p class="tc-p">The academy had genuine assets: EPV accreditation, credible expert authorship, national media presence and deep course content. What it lacked was the <strong>evidence infrastructure to make decisions with</strong>.<br/><br/>With primitive data tracking and understanding, decisions defaulted to intuition. Marketing spend was allocated without attribution. Course development priorities were set without usage evidence. Acquisition relied on Google search, EPV listings and word of mouth — <strong>fragile, unscalable and entirely outside the platform’s control</strong>.<br/><br/>A second-order constraint compounded this. The academy is a small operation, so any growth system had to be maintainable by a very small team — ruling out solutions dependent on continuous original content production. The constraint was not ambition. It was <strong>capacity</strong>.</p></div>
+</div>
+<div class="cs-sec sol-sec"><div class="cs-sec-ey">The Solution</div>
+<div class="cs-sec-t">Build one place where every metric can be compared, then let AI do the reconciling.</div><p class="cs-p">The work began with instrumentation rather than campaigns. The platform&#8217;s numbers existed, but they lived in separate places — course sales in one system, enrolment in another, campaign performance in a third, email metrics in a fourth. Nobody could see them together, so nobody could compare them.<br/><br/>The answer was a <strong>single place to bring all of it together</strong>: an Excel-based year-on-year model layered onto monthly KPI dashboards, designed as a <strong>checking layer</strong> rather than a report. Its function is comparison — this month against last, this course against that one, this campaign against the one before it, this year against the same period last year. Enrolment trends by course and cohort, campaign-level attribution, email sequence performance and seasonal purchasing patterns all became visible <strong>side by side</strong> for the first time.<br/><br/><strong>AI-assisted analysis</strong> sits on top of it. Rather than manually reconciling and interpreting each month&#8217;s figures, AI tools are used to <strong>synthesise across the data sources, surface the comparisons that moved and flag what changed and why</strong> — turning a reporting task that would otherwise consume days into something a small team can run monthly.<br/><br/>That visibility immediately changed decisions. <strong>Drop-off points in the learner journey</strong> were identified from usage data and course design and product development were reprioritised accordingly. Marketing spend was directed and tracked against budget using conversion data rather than assumption.<br/><br/>The same AI-assisted approach addressed the capacity ceiling on content: existing television, radio and podcast appearances were repurposed into structured social content, sustaining a consistent publishing rhythm without the volume of original production a small team cannot maintain.</p></div>
+<div class="cs-sec impact-sec"><div class="cs-sec-ey">The Impact</div>
+<div class="cs-sec-t">Membership more than tripled, revenue grew 49% year on year, and the platform recorded its strongest sales period to date.</div><p class="cs-p">Active membership grew from <strong>3,000 to over 10,300 and continues to grow</strong>. Revenue grew <strong>49% year on year</strong>, and the platform delivered the <strong>highest sales period in its history</strong>.<br/><br/>The mechanism behind those numbers was not a marketing campaign. It was the conversion of <strong>scattered usage data into comparable, checkable product decisions</strong>. Identifying where learners dropped out and reprioritising course design improved the product, which improved retention, which improved word of mouth, which reduced dependence on paid acquisition. The dashboard was not a reporting artefact — it was the <strong>checking layer</strong> every subsequent decision was run against.<br/><br/>The AI-assisted content system solved the constraint that would otherwise have capped growth, allowing a very small team to sustain a publishing rhythm that would conventionally require several full-time staff. <strong>The growth is maintainable</strong> rather than dependent on unsustainable effort.</p>
+<div class="proj-box"><div class="proj-l">Long-term projection</div><p class="proj-p"><strong>Longer term.</strong> The measurement infrastructure and AI-assisted content system are permanent assets that continue producing decisions rather than one-time gains. With attribution established, marketing spend can be scaled against known conversion rates instead of estimated ones. The model — instrument first, let data direct product, use AI to remove the capacity ceiling — transfers directly to any small specialist education business facing the same constraint: strong expertise, weak commercial infrastructure, no headcount to bridge the gap.</p></div></div>
+<div class="cs-sec"><div class="cs-sec-ey">Process</div>
+<div class="cs-sec-t">Five stages, end to end.</div><ol class="proc">
+<li class="proc-li"><span class="proc-n">01</span><div class="proc-b"><div class="proc-t">Data consolidation and comparison layer</div><div class="proc-d">Course sales, enrolment, campaign and email data brought into a single Excel-based year-on-year model layered on monthly KPI dashboards, built for month-on-month and year-on-year comparison rather than static reporting.</div></div></li>
+<li class="proc-li"><span class="proc-n">02</span><div class="proc-b"><div class="proc-t">Learner journey analysis</div><div class="proc-d">Drop-off points identified from usage data across all 16 courses and converted into reprioritised course design and product development decisions.</div></div></li>
+<li class="proc-li"><span class="proc-n">03</span><div class="proc-b"><div class="proc-t">AI-assisted analysis and content</div><div class="proc-d">AI tools applied to synthesise across data sources, surface the comparisons that moved and flag what changed and why; the same approach used to repurpose existing broadcast and podcast media into a structured social content pipeline.</div></div></li>
+<li class="proc-li"><span class="proc-n">04</span><div class="proc-b"><div class="proc-t">Campaign design and execution</div><div class="proc-d">Payday-aligned offer timing, structured flash sale sequences, multi-week newsletter design mapped to seasonal pain points, and school-wide outreach with forward-to-staff mechanics.</div></div></li>
+<li class="proc-li"><span class="proc-n">05</span><div class="proc-b"><div class="proc-t">Usability testing and optimisation</div><div class="proc-d">Systematic review across all 16 courses against a structured usability framework, identifying friction, navigation barriers and technical defects and producing prioritised fixes.</div></div></li>
+</ol></div>
+<div class="cs-sec"><div class="cs-sec-ey">Skills &amp; Disciplines Applied</div>
+<div class="cs-sec-t">What this project drew on.</div><div class="fw">
+<div class="fw-c"><div class="fw-l">Data analytics &amp; reporting</div><div class="fw-v">KPI framework design, Excel performance modelling, multi-source data consolidation, year-on-year and cohort comparison analysis, revenue attribution, conversion tracking, executive dashboards</div></div>
+<div class="fw-c"><div class="fw-l">AI-assisted workflows</div><div class="fw-v">AI-accelerated cross-source data synthesis and metric comparison, AI content repurposing pipelines, capacity-constrained workflow automation</div></div>
+<div class="fw-c"><div class="fw-l">Growth &amp; commercial strategy</div><div class="fw-v">Marketing spend direction against budget, campaign sequencing, segmentation and outreach architecture, revenue growth modelling, usability-driven product optimisation</div></div>
+</div></div>
+<div class="cs-sec"><div class="cs-sec-ey">My Contribution</div>
+<div class="cs-sec-t">Insights and Growth Analyst</div>
+<div class="role-box"><div class="role-lbl">Role · Kriti Sahni</div><div class="role-t">Insights and Growth Analyst</div><ul class="role-ul">
+<li>Grew active membership from 3,000 to over 10,300 and delivered 49% year-on-year revenue growth by translating usage data into product, course and marketing priorities.</li>
+<li>Built and maintains an Excel-based year-on-year model layered on monthly KPI dashboards, consolidating course sales, enrolment, campaign and email data into a single comparison layer for senior stakeholders.</li>
+<li>Designed an AI-assisted analysis workflow that synthesises across data sources to surface month-on-month and year-on-year metric comparisons, and applied the same approach to content repurposing so a small team could sustain a publishing rhythm.</li>
+</ul></div><div class="tags">
+<span class="tag">Data analytics</span>
+<span class="tag">KPI frameworks</span>
+<span class="tag">AI workflows</span>
+<span class="tag">Growth strategy</span>
+<span class="tag">Revenue modelling</span>
+<span class="tag">Usability testing</span>
+</div></div></div>
+<div class="cs-bot">
+<div class="cs-bot-btn" onclick="go('aib')">← Values in Action</div>
+<div class="cs-bot-btn" onclick="go('merge')">Projet Merge →</div>
+</div></div>
+
+<div id="p-merge" class="cs-pg cv-forest hidden">
+<div class="cs-strip"></div>
+<div class="cs-hero"><div class="cs-hero-in">
+<div class="cs-ey"><span class="cs-ey-dot"></span>Digital Health Product Engineering · SaaS Development · Ireland · 2026–Present</div>
+<h1 class="cs-h1">Projet Merge:<br/><i>A Health Technology Decision-Support System for Frontline Care</i></h1>
+<div class="cs-org">Projet Merge · ChangeAble Behaviour Solutions — in active development</div>
+<div class="st-badge st-live"><span class="st-dot"></span>In progress · UX and go-to-market stage</div>
+<div class="cs-meta">
+<div class="cs-mi"><div class="cs-ml">Domain</div><div class="cs-mv">Digital Health Product Engineering</div></div>
+<div class="cs-mi"><div class="cs-ml">Stage</div><div class="cs-mv">MVP in active development</div></div>
+<div class="cs-mi"><div class="cs-ml">Architecture</div><div class="cs-mv">Mobile client + web dashboard</div></div>
+<div class="cs-mi"><div class="cs-ml">Role</div><div class="cs-mv">Product and Delivery Lead</div></div>
+</div></div></div>
+<div class="ms-wrap"><div class="ms-in">
+<div class="ms-box"><span class="ms-n">23</span><span class="ms-l">Screens architected and prototyped across both product surfaces</span></div>
+<div class="ms-box"><span class="ms-n">10+</span><span class="ms-l">Decision branches encoded into the adaptive routing logic</span></div>
+<div class="ms-box"><span class="ms-n">2 min</span><span class="ms-l">Target latency from user input to actionable system output</span></div>
+<div class="ms-box"><span class="ms-n">5 yrs</span><span class="ms-l">Of specialist domain expertise encoded into a scalable software architecture</span></div>
+</div></div>
+<div class="cs-body">
+<div class="gal"><div class="gal-ey">Project materials</div><div class="gal-scroll">
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="merge slide 1" src="images/merge-1.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">01</span><span class="gs-slot-t">merge-1</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="merge slide 2" src="images/merge-2.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">02</span><span class="gs-slot-t">merge-2</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="merge slide 3" src="images/merge-3.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">03</span><span class="gs-slot-t">merge-3</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="merge slide 4" src="images/merge-4.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">04</span><span class="gs-slot-t">merge-4</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="merge slide 5" src="images/merge-5.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">05</span><span class="gs-slot-t">merge-5</span></div></div>
+</div></div>
+<div class="two-col">
+<div class="tc-item"><div class="tc-ey">The Organisation</div><div class="tc-t">A technology product built to encode scarce expert judgement into an always-available system.</div><p class="tc-p">Projet Merge is an early-stage adaptive decision-support system in active development, comprising a mobile client for frontline users and a web dashboard for organisational leads.<br/><br/>The technical problem is <strong>expertise distribution</strong>. Specialist domain knowledge exists but is delivered synchronously by a scarce human expert on a monthly cycle, while demand for it is continuous and unpredictable. The system encodes that judgement into an <strong>adaptive routing architecture</strong> that resolves a user’s situation to a specific, evidence-grounded output in under two minutes, with structured escalation where the situation exceeds what encoded logic can safely handle.</p></div>
+<div class="tc-item"><div class="tc-ey">The Problem</div><div class="tc-t">Three technical gaps compound, and no product on the market closes them within a single system.</div><p class="tc-p"><strong>Availability.</strong> Expert support is delivered synchronously on a monthly cycle. Between sessions the system has no coverage, and a non-specialist user makes a consequential decision with no support layer available.<br/><br/><strong>Retrieval.</strong> Training platforms store knowledge but provide no retrieval mechanism at the point of need. A user under time pressure cannot search a course library. The requirement is <strong>a structured query path resolving to a single actionable output in seconds</strong>, not a document to be read.<br/><br/><strong>Data.</strong> Organisational leads have no structured dataset on what their teams encounter. The signal is trapped in individual memory and unstructured free-text logs, which are not queryable. Without structured capture at the point of interaction, <strong>pattern detection is impossible</strong> and governance stays reactive by construction.<br/><br/>Existing products address one gap each. Closing all three requires a system where the capture mechanism and the support mechanism are <strong>the same interaction</strong>.</p></div>
+</div>
+<div class="cs-sec sol-sec"><div class="cs-sec-ey">The Solution</div>
+<div class="cs-sec-t">A two-surface system architecture where structured data capture is a by-product of delivering user value.</div><p class="cs-p">The client-side interface is a <strong>structured triage flow</strong> rather than a content library. A point-of-incident flag triggers a five-question broad filter routing to one of approximately ten themes, followed by narrow filtering that resolves to a <strong>solution card</strong> — plain-language, immediately actionable output designed to be read and applied by someone under pressure in under two minutes.<br/><br/>Every interaction feeds a <strong>feedback loop</strong> — tried, resolved, not resolved — and an escalation pathway to human consultation where required. Interaction flows are built around the error-prone decision points identified through five years of delivering the service manually.<br/><br/>The dashboard aggregates anonymised theme frequency across the organisation, enabling <strong>proactive pattern identification</strong> before escalation and generating templated reporting structured to meet regulatory documentation requirements. Governance intelligence is generated as a by-product of frontline use rather than requiring separate administrative effort — the design decision that makes it survive contact with an under-resourced team.</p></div>
+<div class="cs-sec impact-sec"><div class="cs-sec-ey">The Impact</div>
+<div class="cs-sec-t">A system designed to convert scarce expertise into continuously available infrastructure.</div><p class="cs-p">Projet Merge is <strong>in active development</strong>, currently at UX and go-to-market strategic stage. The significance sits in what has been architected rather than what has been deployed.<br/><br/>The product demonstrates a transferable proposition: five years of specialist expertise, previously available to five organisations one afternoon a month, can be <strong>encoded into an architecture available continuously</strong>. This is not automation of expert judgement — it is structured triage that routes a non-specialist to an evidence-based starting point and escalates cleanly when the situation exceeds what logic can safely handle.<br/><br/>The governance dimension converts documentation from an administrative burden into an <strong>operational asset</strong>: an organisational lead gains the ability to intervene on a pattern before it becomes a finding.<br/><br/>A critical assumption — whether frontline users can reliably self-classify a situation at the point of logging — has been formally documented as <strong>requiring validation before launch</strong>. Naming that risk explicitly is itself an outcome: the difference between a product built on a hope and one built on a testable proposition.</p>
+<div class="proj-box"><div class="proj-l">Long-term projection</div><p class="proj-p"><strong>Longer term.</strong> The architecture is designed for extension into adjacent regulated settings facing the same three gaps. Enterprise Ireland and Local Enterprise Office funding pathways are being pursued. If validated, the model addresses a structural constraint across health and social care globally: <strong>specialist expertise is scarce, expensive and unevenly distributed</strong>, while demand for it is continuous and distributed everywhere.</p></div></div>
+<div class="cs-sec"><div class="cs-sec-ey">Process</div>
+<div class="cs-sec-t">Five stages, end to end.</div><ol class="proc">
+<li class="proc-li"><span class="proc-n">01</span><div class="proc-b"><div class="proc-t">User research and persona definition</div><div class="proc-d">Research producing two distinct personas — a frontline user needing actionable output in under two minutes, and an organisational lead needing aggregate visibility rather than case management. Product decisions tested against both throughout.</div></div></li>
+<li class="proc-li"><span class="proc-n">02</span><div class="proc-b"><div class="proc-t">Service blueprint and journey mapping</div><div class="proc-d">Combined blueprint mapping the full case from user input through to lead curation and regulator-ready reporting, with separate journey workbooks per persona identifying decision points and cognitive load thresholds.</div></div></li>
+<li class="proc-li"><span class="proc-n">03</span><div class="proc-b"><div class="proc-t">Requirements specification</div><div class="proc-d">Product and Business Requirements Documents defining locked MVP scope, distinguishing Must Have from Should Have with an explicit scope guard against feature creep.</div></div></li>
+<li class="proc-li"><span class="proc-n">04</span><div class="proc-b"><div class="proc-t">System and interaction architecture</div><div class="proc-d">Adaptive routing logic, decision branching and escalation pathways designed around the error-prone decision points identified through five years of manual service delivery.</div></div></li>
+<li class="proc-li"><span class="proc-n">05</span><div class="proc-b"><div class="proc-t">Prototyping and validation</div><div class="proc-d">Two clickable prototypes built — an 18-screen branching mobile flow and a 5-screen navigable desktop dashboard — button-driven to test real decision pathways, with critical assumptions formally documented for pre-launch validation.</div></div></li>
+</ol></div>
+<div class="cs-sec"><div class="cs-sec-ey">Skills &amp; Disciplines Applied</div>
+<div class="cs-sec-t">What this project drew on.</div><div class="fw">
+<div class="fw-c"><div class="fw-l">Product management</div><div class="fw-v">MVP scope definition, PRD and BRD authoring, requirements prioritisation and traceability, roadmap and scope guard discipline, go-to-market planning</div></div>
+<div class="fw-c"><div class="fw-l">Digital health product engineering</div><div class="fw-v">Two-surface system design, adaptive routing logic, decision-tree architecture, structured data capture design, clickable prototyping, interface design for low-digital-confidence users</div></div>
+<div class="fw-c"><div class="fw-l">Agile delivery</div><div class="fw-v">Iterative development cycles, cross-functional coordination across design, domain and technical workstreams, assumption-driven development, risk documentation</div></div>
+</div></div>
+<div class="cs-sec"><div class="cs-sec-ey">My Contribution</div>
+<div class="cs-sec-t">Product and Delivery Lead</div>
+<div class="role-box"><div class="role-lbl">Role · Kriti Sahni</div><div class="role-t">Product and Delivery Lead</div><ul class="role-ul">
+<li>Leads product and delivery for Projet Merge, an early-stage adaptive decision-support system, architecting 23 screens across a mobile client and web dashboard with 10+ encoded decision branches.</li>
+<li>Authored the product and business requirements documents defining locked MVP scope, distinguishing Must Have from Should Have requirements with an explicit scope guard against feature creep.</li>
+<li>Designed the adaptive routing architecture and escalation logic around error-prone decision points identified through five years of manual service delivery.</li>
+</ul></div><div class="tags">
+<span class="tag">Digital health product engineering</span>
+<span class="tag">Product management</span>
+<span class="tag">Systems architecture</span>
+<span class="tag">UX design</span>
+<span class="tag">Prototyping</span>
+<span class="tag">Agile delivery</span>
+</div></div></div>
+<div class="cs-bot">
+<div class="cs-bot-btn" onclick="go('actualize')">← Growing an Online Community</div>
+<div class="cs-bot-btn" onclick="go('questa')">Building a Customisable Talent Assessment →</div>
+</div></div>
+
+<div id="p-questa" class="cs-pg cv-violet hidden">
+<div class="cs-strip"></div>
+<div class="cs-hero"><div class="cs-hero-in">
+<div class="cs-ey"><span class="cs-ey-dot"></span>Enterprise SaaS · Product Development · Multi-Stakeholder Delivery · India · 2023–2024</div>
+<h1 class="cs-h1">Building a Customisable Talent Assessment<br/><i>Platform in a Market That Only Served Enterprise</i></h1>
+<div class="cs-org">Questa Talent Solutions Pvt. Ltd. — Talent Assessment &amp; Organisational Development</div>
+<div class="st-badge st-done"><span class="st-dot"></span>Complete</div>
+<div class="cs-meta">
+<div class="cs-mi"><div class="cs-ml">Sector</div><div class="cs-mv">HR Technology / Enterprise SaaS</div></div>
+<div class="cs-mi"><div class="cs-ml">Period</div><div class="cs-mv">2023–2024</div></div>
+<div class="cs-mi"><div class="cs-ml">Delivery</div><div class="cs-mv">Full-stack, short-cycle, cross-functional</div></div>
+<div class="cs-mi"><div class="cs-ml">Role</div><div class="cs-mv">UX &amp; Product Development — promoted Associate to Manager in 8 months</div></div>
+</div></div></div>
+<div class="ms-wrap"><div class="ms-in">
+<div class="ms-box"><span class="ms-n">4</span><span class="ms-l">Distinct user roles architected with separate workflows and permission structures</span></div>
+<div class="ms-box"><span class="ms-n">250+</span><span class="ms-l">Competency items built into the framework the platform assesses against</span></div>
+<div class="ms-box"><span class="ms-n">8 months</span><span class="ms-l">From Associate to Manager, on the strength of platform delivery</span></div>
+<div class="ms-box"><span class="ms-n">End-to-end</span><span class="ms-l">Platform designed and shipped from requirements documentation through to production release</span></div>
+</div></div>
+<div class="cs-body">
+<div class="gal"><div class="gal-ey">Project materials</div><div class="gal-scroll">
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="questa slide 1" src="images/questa-1.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">01</span><span class="gs-slot-t">questa-1</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="questa slide 2" src="images/questa-2.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">02</span><span class="gs-slot-t">questa-2</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="questa slide 3" src="images/questa-3.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">03</span><span class="gs-slot-t">questa-3</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="questa slide 4" src="images/questa-4.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">04</span><span class="gs-slot-t">questa-4</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="questa slide 5" src="images/questa-5.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">05</span><span class="gs-slot-t">questa-5</span></div></div>
+</div></div>
+<div class="two-col">
+<div class="tc-item"><div class="tc-ey">The Organisation</div><div class="tc-t">A talent assessment business making the shift from expert service delivery to shipped software.</div><p class="tc-p">Questa Talent Solutions Pvt. Ltd. works in talent assessment and organisational development, helping companies hire, manage and develop their people through psychometric assessment and structured competency evaluation.<br/><br/>The company was undertaking a fundamental transition: from delivering expertise as a <strong>consultancy service</strong> to delivering it as <strong>software</strong>. That shift changes everything about how the work is done — it introduces requirements documentation, release cycles, test and production environments, backend logic and the discipline of shipping something other people operate without you in the room.<br/><br/>As a small company, delivery ran on <strong>short turnarounds and dense cross-functional collaboration</strong> — engineering, design, research, HR subject-matter experts and business stakeholders working in direct contact rather than through layers of process.</p></div>
+<div class="tc-item"><div class="tc-ey">The Problem</div><div class="tc-t">Configurable talent assessment technology existed only at enterprise scale and enterprise price, and could not be customised to an organisation’s own competencies.</div><p class="tc-p">The talent assessment software market was structurally bifurcated. Large enterprises had access to configurable platforms with proper role architecture, dashboards and reporting. Everyone else had <strong>fixed, off-the-shelf instruments</strong> that could not be modified.<br/><br/>The consequence is worse than a feature gap. An organisation assessing candidates against <strong>somebody else&#8217;s competency model</strong> is measuring the wrong thing precisely — a generic framework does not describe what good performance looks like in <em>this</em> company, and a hiring decision made on that basis is confidently wrong.<br/><br/>The technical problem was building a system that stayed coherent while being customisable, requiring <strong>backend logic connecting a configurable framework to assessment delivery to report generation</strong>, working identically in test and production. A talent platform is also not one product — it is <strong>four products sharing a database</strong>, each user type holding a conflicting definition of a good experience.</p></div>
+</div>
+<div class="cs-sec sol-sec"><div class="cs-sec-ey">The Solution</div>
+<div class="cs-sec-t">A full-stack assessment platform with a manager dashboard, customisable competency architecture and automated report generation.</div><p class="cs-p">The platform was built to give mid-market organisations what only enterprise buyers previously had: <strong>a configurable assessment system tied to their own competency model</strong>.<br/><br/>The <strong>250+ item competency framework</strong>, built from structured expert interviews and evidence synthesis, was designed as a configurable substrate rather than a fixed instrument — organisations could select and adapt against their own definitions of performance while retaining a defensible evidence base.<br/><br/>A <strong>manager dashboard</strong> sat at the centre of the product decision. Hiring managers do not need psychometric data; they need an interpretable comparative verdict. The dashboard was designed to convert assessment output into <strong>hiring insight</strong>, with backend logic handling scoring, aggregation and <strong>automated report generation</strong>.<br/><br/>Four user types were architected with separate workflows and permission structures: <strong>test-takers</strong> needing a calm, low-anxiety environment where interface friction does not become measurement error; <strong>hiring managers</strong> needing interpretation, not raw data; <strong>recruiters</strong> needing bulk operations and pipeline visibility; and <strong>administrators</strong> needing configuration and repository control. Permission architecture was designed as the connective layer — a compliance question before a UX one, given the sensitivity of assessment data.<br/><br/>Seamless movement between <strong>test and production environments</strong> was treated as a first-order requirement rather than an engineering detail, because an assessment platform that behaves differently in production is not merely inconvenient — it is invalid.</p></div>
+<div class="cs-sec impact-sec"><div class="cs-sec-ey">The Impact</div>
+<div class="cs-sec-t">A shipped, configurable assessment platform that put enterprise-grade capability within reach of organisations previously excluded from it.</div><p class="cs-p">The platform was <strong>designed and shipped end to end</strong>, taking a talent business from service delivery into software delivery. For a small company on short turnarounds, shipping a multi-role enterprise system with configurable competency architecture, a manager dashboard and automated reporting is a substantial delivery outcome.<br/><br/>The <strong>market reframe</strong> is the significant part. Configurable assessment technology had been the preserve of organisations large enough to fund enterprise licences. Building customisation into the architecture rather than treating it as a premium tier meant an organisation could assess against <strong>its own competencies</strong> — which is the difference between measurement that is precise and measurement that is merely consistent.<br/><br/>The <strong>250+ item competency framework</strong> informed new product development priorities, becoming a roadmap asset rather than only serving the current build.<br/><br/>Working in direct contact with <strong>engineering, design, research, HR subject-matter experts and business stakeholders</strong> under short delivery cycles meant design decisions were validated fast and shipped fast. Promotion from <strong>Associate to Manager within eight months</strong> followed directly from that delivery.</p>
+<div class="proj-box"><div class="proj-l">Long-term projection</div><p class="proj-p"><strong>Longer term.</strong> The configurable competency architecture is the platform’s most durable asset: new modules — assessment centres, succession planning, performance management, pulse surveys — can be built against an existing permission, scoring and reporting structure rather than requiring redesign. Every new instrument built against the framework inherits an established evidence base. For a business making the transition from consultancy to product, this is the difference between software that scales and software that requires its authors present to operate.</p></div></div>
+<div class="cs-sec"><div class="cs-sec-ey">Process</div>
+<div class="cs-sec-t">Five stages, end to end.</div><ol class="proc">
+<li class="proc-li"><span class="proc-n">01</span><div class="proc-b"><div class="proc-t">Requirements definition</div><div class="proc-d">Product and business requirements documented in collaboration with engineering leadership, business stakeholders and HR subject-matter experts, translating service-delivery expertise into specified software behaviour and locked release scope.</div></div></li>
+<li class="proc-li"><span class="proc-n">02</span><div class="proc-b"><div class="proc-t">Competency architecture and instrument design</div><div class="proc-d">250+ item competency framework built from structured expert interviews and evidence synthesis, designed as a configurable substrate, with psychometric assessment instruments designed against it.</div></div></li>
+<li class="proc-li"><span class="proc-n">03</span><div class="proc-b"><div class="proc-t">Role architecture and interface design</div><div class="proc-d">Four user types mapped as separate journeys with distinct information hierarchies, permission structures designed as the connective layer, and the full platform interface built in Figma alongside the company website in Adobe XD.</div></div></li>
+<li class="proc-li"><span class="proc-n">04</span><div class="proc-b"><div class="proc-t">Backend logic and environment integration</div><div class="proc-d">Assessment delivery, scoring, aggregation and automated report generation specified with engineering, with seamless parity between test and production environments treated as a first-order requirement.</div></div></li>
+<li class="proc-li"><span class="proc-n">05</span><div class="proc-b"><div class="proc-t">User testing and release validation</div><div class="proc-d">Multi-phase moderated usability studies across all four user groups with cross-group comparative analysis, plus A/B testing establishing pre-launch baselines and post-release benchmarking, delivered into engineering sprint cycles.</div></div></li>
+</ol></div>
+<div class="cs-sec"><div class="cs-sec-ey">Skills &amp; Disciplines Applied</div>
+<div class="cs-sec-t">What this project drew on.</div><div class="fw">
+<div class="fw-c"><div class="fw-l">Enterprise SaaS &amp; product delivery</div><div class="fw-v">Product and business requirements documentation, release scope definition, test and production environment parity, backend logic specification, full-stack delivery with engineering</div></div>
+<div class="fw-c"><div class="fw-l">UX design &amp; research</div><div class="fw-v">Figma, Adobe XD, multi-role workflow architecture, permission structure design, moderated usability testing, cross-group comparative analysis, A/B testing, sprint-integrated research</div></div>
+<div class="fw-c"><div class="fw-l">Psychometrics &amp; competency modelling</div><div class="fw-v">Configurable competency taxonomy design, psychometric instrument design, structured expert elicitation, evidence synthesis, statistical analysis in SPSS with AI-assisted R and Python scripting</div></div>
+</div></div>
+<div class="cs-sec"><div class="cs-sec-ey">My Contribution</div>
+<div class="cs-sec-t">UX &amp; Product Development — promoted to Manager</div>
+<div class="role-box"><div class="role-lbl">Role · Kriti Sahni</div><div class="role-t">UX &amp; Product Development — promoted to Manager</div><ul class="role-ul">
+<li>Designed and shipped a multi-role enterprise SaaS talent assessment platform end to end, mapping role-based workflow architectures and permission structures in Figma across four user types and ensuring interface logic reflected researched user mental models.</li>
+<li>Authored product and business requirements documentation in direct collaboration with engineering, design, research and HR stakeholders, defining release scope and backend logic for assessment delivery, scoring and automated report generation.</li>
+<li>Built a 250+ item configurable competency framework from expert interviews and evidence synthesis, enabling organisations to assess against their own competencies rather than fixed off-the-shelf instruments, and informing new product development priorities.</li>
+</ul></div><div class="tags">
+<span class="tag">Enterprise SaaS</span>
+<span class="tag">Figma</span>
+<span class="tag">Product requirements</span>
+<span class="tag">UX research</span>
+<span class="tag">A/B testing</span>
+<span class="tag">Psychometrics</span>
+<span class="tag">Competency modelling</span>
+<span class="tag">Cross-functional delivery</span>
+</div></div></div>
+<div class="cs-bot">
+<div class="cs-bot-btn" onclick="go('merge')">← Projet Merge</div>
+<div class="cs-bot-btn" onclick="go('cities')">Cities for Better Health →</div>
+</div></div>
+
+<div id="p-cities" class="cs-pg cv-sky hidden">
+<div class="cs-strip"></div>
+<div class="cs-hero"><div class="cs-hero-in">
+<div class="cs-ey"><span class="cs-ey-dot"></span>Urban Health Research · Multidisciplinary · Ireland · 2025–Present</div>
+<h1 class="cs-h1">Cities for Better Health:<br/><i>Researching Health Behaviour Across an Urban Population</i></h1>
+<div class="cs-org">Trinity College Dublin · Centre for Global Health</div>
+<div class="st-badge st-live"><span class="st-dot"></span>In progress</div>
+<div class="cs-meta">
+<div class="cs-mi"><div class="cs-ml">Sector</div><div class="cs-mv">Public Health / Academic Research</div></div>
+<div class="cs-mi"><div class="cs-ml">Focus</div><div class="cs-mv">Chronic disease prevention</div></div>
+<div class="cs-mi"><div class="cs-ml">Pipeline</div><div class="cs-mv">160+ participants</div></div>
+<div class="cs-mi"><div class="cs-ml">Role</div><div class="cs-mv">Research Assistant</div></div>
+</div></div></div>
+<div class="ms-wrap"><div class="ms-in">
+<div class="ms-box"><span class="ms-n">160+</span><span class="ms-l">Participant recruitment pipeline across children, teachers, school stakeholders and adult community members</span></div>
+<div class="ms-box"><span class="ms-n">4</span><span class="ms-l">Distinct participant groups requiring separately designed research materials</span></div>
+<div class="ms-box"><span class="ms-n">NVivo</span><span class="ms-l">Thematic analysis platform in active use across the qualitative dataset</span></div>
+<div class="ms-box"><span class="ms-n">TCD</span><span class="ms-l">Trinity College Dublin, Centre for Global Health</span></div>
+</div></div>
+<div class="cs-body">
+<div class="gal"><div class="gal-ey">Project materials</div><div class="gal-scroll">
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="cities slide 1" src="images/cities-1.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">01</span><span class="gs-slot-t">cities-1</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="cities slide 2" src="images/cities-2.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">02</span><span class="gs-slot-t">cities-2</span></div></div>
+</div></div>
+<div class="two-col">
+<div class="tc-item"><div class="tc-ey">The Organisation</div><div class="tc-t">A multidisciplinary urban health initiative asking what actually shapes health behaviour in a city.</div><p class="tc-p">Cities for Better Health is a multidisciplinary urban health initiative at the <strong>Centre for Global Health, Trinity College Dublin</strong>, focused on chronic disease prevention at community level.<br/><br/>Chronic disease prevention is conventionally approached through clinical risk factors and individual advice. The premise here is different: that health behaviour in a city is shaped by <strong>environment, social structure, institutional design and community norms</strong>, and that intervention design must therefore begin with how people actually live.</p></div>
+<div class="tc-item"><div class="tc-ey">The Problem</div><div class="tc-t">Researching health behaviour across children, teachers, institutions and adults simultaneously, without flattening any of them.</div><p class="tc-p">The initiative spans <strong>children, teachers, school stakeholders and adult community participants</strong>. Each group holds a different relationship to health behaviour, a different vocabulary for describing it and a fundamentally different capacity to engage with research instruments.<br/><br/>Standard practice is to design one instrument and adapt it downward, and it systematically fails. A journal that works for an adult is unusable by a child. A consent process appropriate for a teacher is ethically inadequate for a minor. A focus group protocol designed for peer discussion does not function across an institutional hierarchy.<br/><br/>The second constraint is <strong>ethical rather than methodological</strong>: research spanning child and adult participants requires materially different consent architectures, safeguarding considerations and data governance running in parallel within a single study.<br/><br/>The third is that findings must <strong>actually inform intervention design</strong>. Research producing an accurate description and no actionable direction has not met the brief.</p></div>
+</div>
+<div class="cs-sec sol-sec"><div class="cs-sec-ey">The Solution</div>
+<div class="cs-sec-t">Design research materials per audience rather than adapting one instrument, and run consent as a parallel architecture.</div><p class="cs-p">Participant-facing materials are <strong>designed separately for each audience</strong> rather than adapted from a single master instrument — including <strong>age-appropriate journals for children</strong> alongside distinct materials for teachers, school stakeholders and adult community participants, with language, complexity and format tailored per group across the <strong>160+ participant pipeline</strong>.<br/><br/>Data collection combines <strong>semi-structured interviews and focus groups</strong> with diverse urban stakeholders, with protocols adjusted for group composition and institutional dynamics. Analysis applies <strong>thematic analysis in NVivo</strong> to surface insights capable of informing intervention design rather than only describing current behaviour.<br/><br/>Ethical compliance, informed consent and GDPR data governance are managed as a <strong>parallel architecture</strong> across the multidisciplinary team, with consent processes adapted separately for child and adult groups. Project workflows are coordinated with the Principal Investigator using <strong>agile iterative cycles</strong>, allowing methodology to adapt in response to emerging findings.</p></div>
+<div class="cs-sec impact-sec"><div class="cs-sec-ey">The Impact</div>
+<div class="cs-sec-t">Research designed from the outset to produce intervention direction, not only description.</div><p class="cs-p">The work is <strong>ongoing</strong>, and its significance to date lies in the research infrastructure established.<br/><br/>Designing materials per audience rather than adapting downward has produced a <strong>usable dataset across all four participant groups</strong>, including children — a group frequently excluded from urban health research precisely because instrument design for them is harder. Their inclusion matters: childhood is where the behavioural patterns underlying adult chronic disease are established, and research that excludes children misses the intervention point with the greatest long-term leverage.<br/><br/>The parallel consent and safeguarding architecture demonstrates that <strong>multi-generational community research can be conducted rigorously and ethically within a single study</strong> — the practical obstacle that most often causes such studies to narrow to adults only.<br/><br/>Thematic analysis is surfacing insights structured explicitly to <strong>inform chronic disease prevention intervention design</strong>, with the intervention question in view from the outset rather than retrofitted.</p>
+<div class="proj-box"><div class="proj-l">Long-term projection</div><p class="proj-p"><strong>Longer term.</strong> Chronic disease represents the dominant share of health system burden across high-income countries, and prevention at community level is the only intervention point with population-scale leverage. Research capturing how health behaviour is shaped across generations within the same urban environment supports intervention design addressing environment and social structure rather than individual advice. The multi-audience materials methodology is directly reusable by any community health research programme facing the same participant-diversity constraint.</p></div></div>
+<div class="cs-sec"><div class="cs-sec-ey">Process</div>
+<div class="cs-sec-t">Five stages, end to end.</div><ol class="proc">
+<li class="proc-li"><span class="proc-n">01</span><div class="proc-b"><div class="proc-t">Research material design</div><div class="proc-d">Materials designed separately per audience, including age-appropriate journals for children and distinct instruments for teachers, school stakeholders and adult community participants.</div></div></li>
+<li class="proc-li"><span class="proc-n">02</span><div class="proc-b"><div class="proc-t">Recruitment and ethics governance</div><div class="proc-d">Coordination of a 160+ participant pipeline across four stakeholder groups, with ethical compliance, informed consent and GDPR data governance managed as parallel architectures for child and adult participants.</div></div></li>
+<li class="proc-li"><span class="proc-n">03</span><div class="proc-b"><div class="proc-t">Qualitative data collection</div><div class="proc-d">Semi-structured interviews and focus groups conducted with diverse urban stakeholders, with protocols adapted for group composition and institutional dynamics.</div></div></li>
+<li class="proc-li"><span class="proc-n">04</span><div class="proc-b"><div class="proc-t">Thematic analysis</div><div class="proc-d">Systematic thematic analysis in NVivo applied to the qualitative dataset to surface health behaviour insights capable of informing intervention design.</div></div></li>
+<li class="proc-li"><span class="proc-n">05</span><div class="proc-b"><div class="proc-t">Agile research coordination</div><div class="proc-d">Project workflows and timelines coordinated with the Principal Investigator using agile iterative cycles, adapting methodology in response to emerging findings.</div></div></li>
+</ol></div>
+<div class="cs-sec"><div class="cs-sec-ey">Skills &amp; Disciplines Applied</div>
+<div class="cs-sec-t">What this project drew on.</div><div class="fw">
+<div class="fw-c"><div class="fw-l">Qualitative research methods</div><div class="fw-v">Semi-structured interviewing, focus group facilitation, thematic analysis, NVivo, multi-stakeholder research design, participant material design</div></div>
+<div class="fw-c"><div class="fw-l">Research governance &amp; compliance</div><div class="fw-v">GDPR data governance, parallel consent architecture for child and adult participants, safeguarding procedures, institutional ethics compliance</div></div>
+<div class="fw-c"><div class="fw-l">Research project coordination</div><div class="fw-v">Agile iterative cycles, recruitment pipeline management, timeline coordination with Principal Investigator, multidisciplinary team workflow</div></div>
+</div></div>
+<div class="cs-sec"><div class="cs-sec-ey">My Contribution</div>
+<div class="cs-sec-t">Research Assistant</div>
+<div class="role-box"><div class="role-lbl">Role · Kriti Sahni</div><div class="role-t">Research Assistant</div><ul class="role-ul">
+<li>Designs participant-facing research materials for a multidisciplinary urban health initiative, including age-appropriate journals for children alongside materials for teachers and adult community participants, across a 160+ participant recruitment pipeline.</li>
+<li>Conducts semi-structured interviews and focus groups with diverse urban stakeholders, applying thematic analysis in NVivo to surface health behaviour insights informing chronic disease prevention intervention design.</li>
+<li>Oversees ethical compliance, informed consent and GDPR data governance across a multidisciplinary academic team, adapting consent architectures across child and adult participant groups.</li>
+</ul></div><div class="tags">
+<span class="tag">Qualitative research</span>
+<span class="tag">NVivo</span>
+<span class="tag">Thematic analysis</span>
+<span class="tag">Research governance</span>
+<span class="tag">GDPR</span>
+<span class="tag">Agile coordination</span>
+</div></div></div>
+<div class="cs-bot">
+<div class="cs-bot-btn" onclick="go('questa')">← Building a Customisable Talent Assessment</div>
+<div class="cs-bot-btn" onclick="go('dementia')">Designing Cognitive Rehabilitation →</div>
+</div></div>
+
+<div id="p-dementia" class="cs-pg cv-red hidden">
+<div class="cs-strip"></div>
+<div class="cs-hero"><div class="cs-hero-in">
+<div class="cs-ey"><span class="cs-ey-dot"></span>Clinical Research · Cognitive Rehabilitation · Ireland · 2024–2025</div>
+<h1 class="cs-h1">Designing Cognitive Rehabilitation<br/><i>for People Living with Early-Stage Dementia</i></h1>
+<div class="cs-org">Tallaght University Hospital · ProBrain Research Lab · Alzheimer Society of Ireland</div>
+<div class="st-badge st-done"><span class="st-dot"></span>Complete</div>
+<div class="cs-meta">
+<div class="cs-mi"><div class="cs-ml">Sector</div><div class="cs-mv">Clinical Research / Dementia Care</div></div>
+<div class="cs-mi"><div class="cs-ml">Setting</div><div class="cs-mv">Hospital memory clinic</div></div>
+<div class="cs-mi"><div class="cs-ml">Study</div><div class="cs-mv">Nationally funded accessibility study</div></div>
+<div class="cs-mi"><div class="cs-ml">Role</div><div class="cs-mv">Research Practitioner</div></div>
+</div></div></div>
+<div class="ms-wrap"><div class="ms-in">
+<div class="ms-box"><span class="ms-n">6 weeks</span><span class="ms-l">Goal-oriented Cognitive Rehabilitation intervention designed, delivered and evaluated</span></div>
+<div class="ms-box"><span class="ms-n">Cited</span><span class="ms-l">Contributing study cited in the World Alzheimer Report 2025</span></div>
+<div class="ms-box"><span class="ms-n">National</span><span class="ms-l">Nationally funded study on cognitive rehabilitation accessibility in Ireland</span></div>
+<div class="ms-box"><span class="ms-n">MDT</span><span class="ms-l">Delivered within a multidisciplinary clinical team of neuropsychologists, clinicians and allied health professionals</span></div>
+</div></div>
+<div class="cs-body">
+<div class="gal"><div class="gal-ey">Project materials</div><div class="gal-scroll">
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="tallaght slide 1" src="images/tallaght-1.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">01</span><span class="gs-slot-t">tallaght-1</span></div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="tallaght slide 2" src="images/tallaght-2.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">02</span><span class="gs-slot-t">tallaght-2</span></div></div>
+</div></div>
+<div class="two-col">
+<div class="tc-item"><div class="tc-ey">The Organisation</div><div class="tc-t">A hospital memory clinic and a national question about who actually gets access to cognitive rehabilitation.</div><p class="tc-p">This work was delivered at <strong>Tallaght University Hospital</strong>, within the ProBrain Research Lab and in partnership with the <strong>Alzheimer Society of Ireland</strong>, as part of a nationally funded study on the accessibility of cognitive rehabilitation in Ireland.<br/><br/>Goal-oriented Cognitive Rehabilitation is one of few non-pharmacological interventions with a credible evidence base for maintaining everyday functioning in early-stage dementia. The evidence exists. <strong>Access does not.</strong> The national question was structural: what prevents a person diagnosed with early-stage Alzheimer’s from receiving an intervention known to help.</p></div>
+<div class="tc-item"><div class="tc-ey">The Problem</div><div class="tc-t">Designing an intervention for a population whose defining characteristic is impairment of the exact functions the intervention depends on.</div><p class="tc-p">Cognitive rehabilitation asks a participant to set a meaningful functional goal, hold it across weeks, apply strategies between sessions and self-monitor progress. Every one of those requirements draws on <strong>memory, executive function and self-monitoring</strong> — precisely the capacities affected by the condition being treated.<br/><br/>Generic programme design cannot solve this. Materials pitched at standard reading levels exclude participants. Sessions paced for a research schedule outpace comprehension. Consent processes designed for cognitively intact adults become ethically fragile when capacity fluctuates day to day.<br/><br/>A second constraint is that the patient is not the only user. <strong>Family caregivers</strong> carry much of the between-session implementation, and their capacity and understanding materially determine whether the intervention works. Designing for the patient alone reliably produces an intervention that fails at home.</p></div>
+</div>
+<div class="cs-sec sol-sec"><div class="cs-sec-ey">The Solution</div>
+<div class="cs-sec-t">An intervention designed around the actual cognitive and social conditions of the people receiving it, evaluated for individual-level effect.</div><p class="cs-p">A <strong>six-week Goal-oriented Cognitive Rehabilitation intervention</strong> was designed, delivered and evaluated for individuals with early-stage Alzheimer’s disease and related dementias.<br/><br/>Delivery was adapted continuously to the participant rather than the protocol. <strong>Method, language and pacing</strong> were adjusted to cognitive presentation while maintaining protocol integrity — the balance that determines whether a study produces usable data or excludes the participants it exists to serve. Consent was treated as an ongoing process rather than a signature, reflecting fluctuating capacity.<br/><br/><strong>Family caregivers were engaged as participants</strong> in the intervention rather than observers of it, supporting adherence in the home environment where the functional goals actually had to be achieved.<br/><br/>Evaluation used <strong>single-subject research design</strong> alongside pre/post methodology. In a heterogeneous dementia population, group averages conceal exactly the individual-level treatment effects that matter clinically. Single-subject design surfaces whether <em>this</em> person improved on <em>their</em> goal.</p></div>
+<div class="cs-sec impact-sec"><div class="cs-sec-ey">The Impact</div>
+<div class="cs-sec-t">A contributing study cited in the World Alzheimer Report 2025.</div><p class="cs-p">The study contributed to the international evidence base on cognitive rehabilitation accessibility and was <strong>cited in the World Alzheimer Report 2025</strong>, published by Alzheimer’s Disease International. For a nationally funded accessibility study, citation in the sector’s principal global report is the clearest signal that the work informed the field rather than only the funder.<br/><br/>The methodological contribution matters as much as the finding. Demonstrating that a structured protocol <strong>can be delivered with fidelity to a cognitively impaired population</strong> addresses the practical objection most often raised against scaling these interventions.<br/><br/>The caregiver-inclusive design produced a further insight with direct service implications: interventions treating the caregiver as an implementation partner rather than an accompanying relative are substantially more likely to survive the transition from clinic to home.</p>
+<div class="proj-box"><div class="proj-l">Long-term projection</div><p class="proj-p"><strong>Longer term.</strong> Dementia prevalence in Ireland is projected to rise substantially while specialist neuropsychology capacity remains constrained. Evidence that structured cognitive rehabilitation can be delivered with fidelity, and adapted for accessibility, supports expanding delivery beyond specialist memory clinics into community and primary care. The design principles established — adaptive pacing, caregiver inclusion, ongoing consent, individual-level evaluation — transfer directly to any intervention designed for cognitively vulnerable populations, including the digital tools now entering this space.</p></div></div>
+<div class="cs-sec"><div class="cs-sec-ey">Process</div>
+<div class="cs-sec-t">Five stages, end to end.</div><ol class="proc">
+<li class="proc-li"><span class="proc-n">01</span><div class="proc-b"><div class="proc-t">Intervention design</div><div class="proc-d">Six-week GREAT-CR protocol designed for early-stage Alzheimer’s and related dementias, structured around personally meaningful functional goals identified with each participant.</div></div></li>
+<li class="proc-li"><span class="proc-n">02</span><div class="proc-b"><div class="proc-t">Clinical assessment</div><div class="proc-d">Standardised neuropsychological assessments, structured clinical interviews and cognitive and functional evaluations conducted with patients and caregivers in a hospital memory clinic setting.</div></div></li>
+<li class="proc-li"><span class="proc-n">03</span><div class="proc-b"><div class="proc-t">Adaptive delivery</div><div class="proc-d">Research methods, language and pacing continuously adapted to participants with dementia while maintaining protocol integrity and strict ethical standards, with caregivers engaged to support home implementation.</div></div></li>
+<li class="proc-li"><span class="proc-n">04</span><div class="proc-b"><div class="proc-t">Analysis</div><div class="proc-d">Individual-level treatment effects evaluated using single-subject research design, integrated with pre/post outcome analysis using inferential statistics in SPSS.</div></div></li>
+<li class="proc-li"><span class="proc-n">05</span><div class="proc-b"><div class="proc-t">Multidisciplinary translation</div><div class="proc-d">Findings translated into iterative programme improvement within a clinical team of neuropsychologists, clinical psychologists, allied health professionals and memory clinic physicians.</div></div></li>
+</ol></div>
+<div class="cs-sec"><div class="cs-sec-ey">Skills &amp; Disciplines Applied</div>
+<div class="cs-sec-t">What this project drew on.</div><div class="fw">
+<div class="fw-c"><div class="fw-l">Clinical assessment &amp; intervention</div><div class="fw-v">Neuropsychological assessment, structured clinical interviewing, Goal-oriented Cognitive Rehabilitation, protocol fidelity management, multidisciplinary clinical practice</div></div>
+<div class="fw-c"><div class="fw-l">Quantitative analysis</div><div class="fw-v">Single-subject research design, pre/post evaluation methodology, inferential statistics, SPSS</div></div>
+<div class="fw-c"><div class="fw-l">Research ethics &amp; governance</div><div class="fw-v">Ongoing consent for fluctuating capacity, ICH Good Clinical Practice, vulnerable population research ethics, GDPR data governance</div></div>
+</div></div>
+<div class="cs-sec"><div class="cs-sec-ey">My Contribution</div>
+<div class="cs-sec-t">Research Practitioner</div>
+<div class="role-box"><div class="role-lbl">Role · Kriti Sahni</div><div class="role-t">Research Practitioner</div><ul class="role-ul">
+<li>Designed, delivered and evaluated a six-week Goal-oriented Cognitive Rehabilitation intervention for individuals with early-stage Alzheimer's disease, as part of a nationally funded study on accessibility of cognitive rehabilitation in Ireland.</li>
+<li>Conducted neuropsychological assessments, structured clinical interviews and standardised cognitive and functional evaluations with patients and family caregivers in a hospital memory clinic setting.</li>
+<li>Analysed intervention outcomes using pre/post methodology and inferential statistics in SPSS, applying single-subject research designs to evaluate individual-level treatment effects.</li>
+</ul></div><div class="tags">
+<span class="tag">Clinical assessment</span>
+<span class="tag">SPSS</span>
+<span class="tag">Single-subject design</span>
+<span class="tag">Research ethics</span>
+<span class="tag">Dementia care</span>
+<span class="tag">World Alzheimer Report</span>
+</div></div></div>
+<div class="cs-bot">
+<div class="cs-bot-btn" onclick="go('cities')">← Cities for Better Health</div>
+<div class="cs-bot-btn" onclick="go('col')">All case studies →</div>
+</div></div>
+<script>
+function imgFallback(el){
+  var s = el.getAttribute('src');
+  if(/\.jpg$/i.test(s)){ el.setAttribute('src', s.replace(/\.jpg$/i,'.png')); return; }
+  if(/\.png$/i.test(s)){ el.setAttribute('src', s.replace(/\.png$/i,'.jpeg')); return; }
+  var c = el.parentNode; if(c) c.className = 'gs-cell empty';
+}
+const pages=['col','nzata','ch','lab','aib','actualize','merge','questa','cities','dementia'];
+const dots={col:'#E08A1E',nzata:'#8A4FBF',ch:'#E08A1E',lab:'#B85C10',aib:'#4A2E73',actualize:'#1F6FB2',merge:'#1A5438',questa:'#5B3E9B',cities:'#1F6F8B',dementia:'#B03535'};
+function go(id){
+  pages.forEach(function(p){var e=document.getElementById('p-'+p);if(e)e.classList.toggle('hidden',p!==id);});
+  document.getElementById('nbk').classList.toggle('vis',id!=='col');
+  var d=document.getElementById('ldot');
+  if(d)d.style.background=dots[id]||dots.col;
+  window.scrollTo({top:0,behavior:'instant'});
+}
+</script>
+</body>
+</html>
