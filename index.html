@@ -157,6 +157,21 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .gs-slot-n{font-size:20px;font-weight:800;color:var(--ac);opacity:.45;letter-spacing:-.03em}
 .gs-slot-t{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ac);opacity:.6}
 
+/* Phone-screen gallery row: portrait images such as prototype screens. Add class "gal-phone" to a .gal */
+.gal + .gal{margin-top:26px}
+.gal-phone .gal-scroll{gap:14px;align-items:flex-start}
+.gal-phone .gs-cell{width:min-content}
+.gal-phone .gs-img{height:440px;width:auto;min-width:0;max-width:none;aspect-ratio:auto 390/844;object-fit:contain;border-radius:12px;background:var(--bg2)}
+.gal-phone .gs-slot{height:440px;width:203px;min-width:0;border-radius:12px}
+.gs-cap{font-size:10.5px;font-weight:600;color:var(--ink3);line-height:1.4;margin-top:8px}
+.gs-cap b{font-weight:800;color:var(--ac);margin-right:6px}
+/* "Conceptual" label and note for gallery rows that show design concepts rather than a shipped product */
+.gal-tag{display:inline-block;margin-left:8px;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:2px 9px;border-radius:100px;background:var(--ac-l);color:var(--ac);border:1px solid var(--ac-m);vertical-align:middle}
+.gal-note{font-size:12px;font-weight:300;color:var(--ink3);line-height:1.6;max-width:640px;margin:-3px 0 13px}
+.gal-note strong{font-weight:600;color:var(--ink2)}
+/* Optional row ("gal-opt"): once at least one image has loaded, unused slots hide themselves */
+.gal-opt:has(.gs-cell:not(.empty)) .gs-cell.empty{display:none}
+
 .two-col{display:grid;grid-template-columns:1fr 1fr;background:var(--ac-l);border:1px solid var(--ac-m);border-radius:7px;overflow:hidden;margin:32px 0 0}
 .tc-item{padding:28px 28px}
 .tc-item:first-child{border-right:1px solid var(--ac-m)}
@@ -227,6 +242,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
   .cards{grid-template-columns:1fr}
   .cs-mi{min-width:50%}
   .gs-img{height:150px;min-width:240px}
+  .gal-phone .gs-img{height:380px}
+  .gal-phone .gs-slot{height:380px;width:176px}
   .impact-sec{padding:24px 20px}
 }
 </style>
@@ -770,6 +787,24 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 <div class="gs-cell"><img class="gs-img" loading="lazy" alt="merge slide 3" src="images/merge-3.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">03</span><span class="gs-slot-t">merge-3</span></div></div>
 <div class="gs-cell"><img class="gs-img" loading="lazy" alt="merge slide 4" src="images/merge-4.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">04</span><span class="gs-slot-t">merge-4</span></div></div>
 <div class="gs-cell"><img class="gs-img" loading="lazy" alt="merge slide 5" src="images/merge-5.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">05</span><span class="gs-slot-t">merge-5</span></div></div>
+</div></div>
+<!-- PROJET MERGE · CONCEPTUAL PROTOTYPE SCREENS
+     The ten images in this row (images/merge-proto-1 … merge-proto-10) are CONCEPTUAL designs.
+     They illustrate the intended strategy flow and are not screenshots of a released product.
+     Keep the "Conceptual" label and the note below visible wherever these images are shown. -->
+<div class="gal gal-phone gal-opt"><div class="gal-ey">Prototype screens · Strategy flow<span class="gal-tag">Conceptual</span></div>
+<p class="gal-note"><strong>Conceptual designs.</strong> These screens illustrate the intended strategy flow for the mobile client. Questions, strategy names and step wording are illustrative and do not represent final product content.</p>
+<div class="gal-scroll">
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="Projet Merge conceptual prototype screen 1: Home" src="images/merge-proto-1.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">01</span><span class="gs-slot-t">merge-proto-1</span></div><div class="gs-cap"><b>01</b>Home</div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="Projet Merge conceptual prototype screen 2: Form, first question" src="images/merge-proto-2.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">02</span><span class="gs-slot-t">merge-proto-2</span></div><div class="gs-cap"><b>02</b>Form · first question</div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="Projet Merge conceptual prototype screen 3: Form, last question" src="images/merge-proto-3.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">03</span><span class="gs-slot-t">merge-proto-3</span></div><div class="gs-cap"><b>03</b>Form · last question</div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="Projet Merge conceptual prototype screen 4: No match, contact the DON" src="images/merge-proto-4.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">04</span><span class="gs-slot-t">merge-proto-4</span></div><div class="gs-cap"><b>04</b>No match · contact the DON</div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="Projet Merge conceptual prototype screen 5: Match found" src="images/merge-proto-5.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">05</span><span class="gs-slot-t">merge-proto-5</span></div><div class="gs-cap"><b>05</b>Match found</div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="Projet Merge conceptual prototype screen 6: Strategy steps" src="images/merge-proto-6.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">06</span><span class="gs-slot-t">merge-proto-6</span></div><div class="gs-cap"><b>06</b>Strategy steps</div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="Projet Merge conceptual prototype screen 7: Used before, choose a new strategy" src="images/merge-proto-7.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">07</span><span class="gs-slot-t">merge-proto-7</span></div><div class="gs-cap"><b>07</b>Used before · choose a new strategy</div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="Projet Merge conceptual prototype screen 8: All strategies" src="images/merge-proto-8.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">08</span><span class="gs-slot-t">merge-proto-8</span></div><div class="gs-cap"><b>08</b>All strategies</div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="Projet Merge conceptual prototype screen 9: Learning Bank" src="images/merge-proto-9.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">09</span><span class="gs-slot-t">merge-proto-9</span></div><div class="gs-cap"><b>09</b>Learning Bank</div></div>
+<div class="gs-cell"><img class="gs-img" loading="lazy" alt="Projet Merge conceptual prototype screen 10: Learning Bank, learn more" src="images/merge-proto-10.jpg" onerror="imgFallback(this)"/><div class="gs-slot"><span class="gs-slot-n">10</span><span class="gs-slot-t">merge-proto-10</span></div><div class="gs-cap"><b>10</b>Learning Bank · learn more</div></div>
 </div></div>
 <div class="two-col">
 <div class="tc-item"><div class="tc-ey">The Organisation</div><div class="tc-t">A technology product built to encode scarce expert judgement into an always-available system.</div><p class="tc-p">Projet Merge is an early-stage adaptive decision-support system in active development, comprising a mobile client for frontline users and a web dashboard for organisational leads.<br/><br/>The technical problem is <strong>expertise distribution</strong>. Specialist domain knowledge exists but is delivered synchronously by a scarce human expert on a monthly cycle, while demand for it is continuous and unpredictable. The system encodes that judgement into an <strong>adaptive routing architecture</strong> that resolves a user’s situation to a specific, evidence-grounded output in under two minutes, with structured escalation where the situation exceeds what encoded logic can safely handle.</p></div>
